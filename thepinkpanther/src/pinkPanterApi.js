@@ -12,13 +12,13 @@ let pinkPanterApi;
             return fetch(url).then(res => res.json())
         },
 
-        getTypePopular: function (type, page) {
-            let path = baseUrl + type + '/popular' + token + '&page=' + page
+        getTypePopular: function(type,page){
+            let path = baseUrl + type + '/popular' + token + '&language=es' + '&page=' + page
             return this.call(path).then(res => res.results)
         },
 
-        getDetaillsIdType: function (type, id) {
-            let path = baseUrl + type + '/' + id + token
+        getDetaillsIdType: function(type,id){
+            let path = baseUrl + type + '/' + id + token 
             return this.call(path).then(res => res)
         }
     }

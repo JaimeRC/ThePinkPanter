@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 import './styles/main.css'
 
 function Carousel(props) {
-    let itemActive = ""//this.props.films.splice(0, 1)
     return (
         <div>
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-
                 <div className="carousel-inner">
+               
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${itemActive.backdrop_path}`} alt="First slide" />
+                        <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt="First slide" />
                         <div className="carousel-caption d-none d-md-block">
-                            <h5>{itemActive.title}</h5>
-                            <p>{itemActive.overview}</p>
+                            <h5>{props.itemActiveFilms.title}</h5>
+                            <p>{props.itemActiveFilms.overview}</p>
                         </div>
                     </div>
+
                     {props.films.map(film => {
                         return (
                             <div className="carousel-item">

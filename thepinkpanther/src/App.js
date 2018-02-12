@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
 import Carousel from './components/Carousel'
+<<<<<<< HEAD
 import Jumbotron from './components/Jumbotron'
+=======
+>>>>>>> 4f9970bc76273f39cdf9bd63a52b9b3478dfdea1
 import pinkPanterApi from './pinkPanterApi.js';
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      films: []
+      films: [],
+      itemActiveFilms: [],
+      series: [],
+      itemActiveSeries: []
     }
   }
 
   componentWillMount() {
-    pinkPanterApi.getTypePopular('movie', '1')
-      .then(films => this.setState({ films }))
+    pinkPanterApi.getTypePopular('movie', 1)
+      .then(films => this.setState({  itemActiveFilms: films.shift(), films }))
+
+    pinkPanterApi.getTypePopular('tv', 1)
+      .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
   }
 
   render() {
@@ -52,7 +61,10 @@ class App extends Component {
             <header>
             <Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>
             </header>
-            <Carousel films={this.state.films}/>
+            <Carousel 
+            films={this.state.films}
+            itemActiveFilms={this.state.itemActiveFilms}
+             />
           </section>
           <section>
             <header>
@@ -62,7 +74,10 @@ class App extends Component {
                 </div>
               </div>
             </header>
-            <Carousel films={this.state.films} />
+            <Carousel 
+            films={this.state.series}
+            itemActiveFilms={this.state.itemActiveSeries}
+             />
           </section>
         </main>
         <footer className="footer">
