@@ -13,13 +13,15 @@ let pinkPanterApi;
         },
 
         getTypePopular: function(type,page){
-            let path = baseUrl + type + '/popular' + token + '&page=' + page
+            let path = baseUrl + type + '/popular' + token + '&language=es' + '&page=' + page
             return this.call(path).then(res => res.results)
         },
 
         getDetaillsIdType: function(type,id){
-            let path = baseUrl + type + '/' + id + token
+            let path = baseUrl + type + '/' + id + token 
             return this.call(path).then(res => res)
         }
     }
 })()
+
+export default pinkPanterApi

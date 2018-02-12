@@ -1,24 +1,23 @@
 import React from 'react'
 
-
 function Carousel(props) {
-    var itemActive = props.films.splice(0, 1)
     return (
         <div>
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-
                 <div className="carousel-inner">
+               
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src={itemActive[0].backdrop_path} alt="First slide" />
+                        <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt="First slide" />
                         <div className="carousel-caption d-none d-md-block">
-                            <h5>{itemActive[0].title}</h5>
-                            <p>{itemActive[0].overview}</p>
+                            <h5>{props.itemActiveFilms.title}</h5>
+                            <p>{props.itemActiveFilms.overview}</p>
                         </div>
                     </div>
+
                     {props.films.map(film => {
                         return (
                             <div className="carousel-item">
-                                <img className="d-block w-100" src={film.backdrop_path} alt="Second slide" />
+                                <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${film.backdrop_path}`} alt="Second slide" />
                                 <div className="carousel-caption d-none d-md-block">
                                     <h5>{film.title}</h5>
                                     <p>{film.overview}</p>
