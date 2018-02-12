@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Search from './components/search/search'
 import './App.css';
+import Carousel from './components/Carousel'
+import pinkPanterApi from './pinkPanterApi.js';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      films: [],
+      itemActiveFilms: [],
+      series: [],
+      itemActiveSeries: []
+    }
+  }
+
+  componentWillMount() {
+    pinkPanterApi.getTypePopular('movie', 1)
+      .then(films => this.setState({  itemActiveFilms: films.shift(), films }))
+
+    pinkPanterApi.getTypePopular('tv', 1)
+      .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
+  }
+
   render() {
     return (
       <div className="App">
@@ -18,7 +36,7 @@ class App extends Component {
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
                   <a className="nav-link" href="#">Peliculas
-                            <span className="sr-only">(current)</span>
+                  <span className="sr-only">(current)</span>
                   </a>
                 </li>
                 <li className="nav-item">
@@ -29,9 +47,32 @@ class App extends Component {
              </div>
           </nav>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main>
+          <section>
+            <header>
+            <Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>
+            </header>
+            <Carousel 
+            films={this.state.films}
+            itemActiveFilms={this.state.itemActiveFilms}
+             />
+          </section>
+          <section>
+            <header>
+              <div className="jumbotron jumbotron-fluid">
+                <div className="container">
+                  <h1 className="display-4">Series</h1>
+                </div>
+              </div>
+            </header>
+            <Carousel 
+            films={this.state.series}
+            itemActiveFilms={this.state.itemActiveSeries}
+             />
+          </section>
+        </main>
+        <footer className="footer">
+        </footer>
       </div>
     );
   }
