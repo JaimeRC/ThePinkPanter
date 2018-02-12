@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-function Card(props) {
+function SearchBar(props) {
     return <nav id="searchBar" className="navbar navbar-light bg-light">
         <form className="form-inline">
             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
@@ -9,4 +9,4 @@ function Card(props) {
     </nav>
 }
 
-export default searchBar
+export default SearchBar
