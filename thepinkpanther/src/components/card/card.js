@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import 'card.css';
+import './styles/card.css';
+import movieApi from 'movieApi';
 
 
 const Card = (props) => {
@@ -7,7 +8,7 @@ const Card = (props) => {
         <div className="front">
             <img src="" alt="" />
             <div className="footer">
-                <p><strong >Title</strong><br />
+                <p><strong>Title</strong><br />
                     Film category
                 </p>
             </div>
