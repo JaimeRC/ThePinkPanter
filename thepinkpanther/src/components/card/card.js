@@ -2,24 +2,24 @@ import React, { Component } from 'react';
 import 'card.css';
 
 
-    const Card = (props) => {
+const Card = (props) => {
     <div className="flip-container">
         <div className="front">
-            <img src="" alt=""/>
+            <img src="" alt="" />
             <div className="footer">
-                <p><strong >Title</strong><br/>
+                <p><strong >Title</strong><br />
                     Film category
                 </p>
             </div>
         </div>
-            <div className="back">
-                <p><strong>Film title</strong>
-                    <br/>
-                    <br/> Film info <br/> More info <br/> Much more info
+        <div className="back">
+            <p><strong>Film title</strong>
+                <br />
+                <br /> Film info <br /> More info <br /> Much more info
                 </p>
-            </div>
+        </div>
     </div>
-    }
+}
 
 
 export default Card
