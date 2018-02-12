@@ -1,0 +1,29 @@
+#searchBar {
+ background: gray;  
+ position: relative;
+ top: 70px; 
+
+}
+
+main {
+    transform: translateY(0);
+    transition: all .6s ease;
+}
+
+main .open {
+    transform: translateY(5%);
+}
+
+#searchBar {
+    top: 0;
+    left: 0;
+    position: relative;
+    transform: translateY(-100%);
+    transition: all .6s ease;
+}
+
+#searchBar .open {
+    transform: translateY(100%);
+}
+
+
