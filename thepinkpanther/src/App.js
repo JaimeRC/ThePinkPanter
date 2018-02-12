@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Carousel from './components/Carousel'
+import Carousel from './components/Carousel';
+import Jumbotron from './components/Jumbotron';
+import Search from './components/search/search.js';
 import pinkPanterApi from './pinkPanterApi.js';
 
 class App extends Component {
@@ -43,14 +45,14 @@ class App extends Component {
                   <a className="nav-link" href="#">Series</a>
                 </li>
               </ul>
-                {/*<Search />*/}
+                <Search />
              </div>
           </nav>
         </header>
         <main>
           <section>
             <header>
-            {/*<Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>*/}
+              <Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>
             </header>
             <Carousel 
             films={this.state.films}
