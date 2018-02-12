@@ -3,3 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.carousel-inner img {
+  width: 100%;
+  max-height: 500px;
+}
