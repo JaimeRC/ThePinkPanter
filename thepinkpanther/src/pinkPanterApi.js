@@ -3,6 +3,7 @@ let pinkPanterApi;
 (function(){
 
     const baseUrl = 'https://api.themoviedb.org/3/'
+    
     const token = '?api_key=5aee70d47502de15fcdde658cbdcb3c7'
 
     pinkPanterApi = {
