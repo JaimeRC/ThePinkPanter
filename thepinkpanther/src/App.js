@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Carousel from './components/Carousel'
-import './pinkPanterApi.js';
+import Jumbotron from './components/Jumbotron'
+import pinkPanterApi from './pinkPanterApi.js';
 
 class App extends Component {
   constructor() {
@@ -12,9 +13,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    console.log(pinkPanterApi)
-    
-    pinkPanterApi.getTypePopular('movie', 1)
+    pinkPanterApi.getTypePopular('movie', '1')
       .then(films => this.setState({ films }))
   }
 
@@ -51,13 +50,9 @@ class App extends Component {
         <main>
           <section>
             <header>
-              <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                  <h1 className="display-4">Peliculas</h1>
-                </div>
-              </div>
+            <Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>
             </header>
-            <Carousel films={this.state.films} />
+            <Carousel films={this.state.films}/>
           </section>
           <section>
             <header>
