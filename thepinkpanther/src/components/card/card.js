@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import 'card.css';
 
 
-    render() 
-    return <div className="flip-container">
+    const Card = (props) => {
+    <div className="flip-container">
         <div className="front">
             <img src="" alt=""/>
             <div className="footer">
-                <p><strong>Title</strong><br/>
+                <p><strong >Title</strong><br/>
                     Film category
                 </p>
             </div>
@@ -18,7 +19,7 @@ import React, { Component } from 'react';
                 </p>
             </div>
     </div>
-    
+    }
 
 
 export default Card
