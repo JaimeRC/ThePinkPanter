@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Carousel from './components/Carousel'
 import pinkPanterApi from './pinkPanterApi.js';
-import Header from './components/Header';
-import Jumbotron from './components/Jumbotron';
+import Jumbotron from './components/Jumbotron'
 
 class App extends Component {
   constructor() {
@@ -62,7 +61,6 @@ class App extends Component {
             <Carousel
               films={this.state.films}
               itemActiveFilms={this.state.itemActiveFilms}
-              onShowItem={this.showItem}
               title={"Pelicula"}
             />
           </section>
