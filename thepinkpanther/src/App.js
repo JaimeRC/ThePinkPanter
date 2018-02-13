@@ -3,6 +3,7 @@ import './App.css';
 import Carousel from './components/Carousel'
 import pinkPanterApi from './pinkPanterApi.js';
 import Jumbotron from './components/Jumbotron'
+import Header from './components/Header'
 
 class App extends Component {
   constructor() {
