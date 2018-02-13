@@ -6,17 +6,17 @@ import pinkPanterApi from './pinkPanterApi';
 function Card(props) {
     <div className="flip-container">
         <div className="front">
-            <img src="" alt="" />
+            <img src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt="" />
             <div className="footer">
-                <p><strong>Title</strong><br />
+                <p><strong>{props.itemActiveFilms.title}</strong><br />
                     Film category
                 </p>
             </div>
         </div>
         <div className="back">
-            <p><strong>Film title</strong>
+            <p><strong>{props.itemActiveFilms.title}</strong>
                 <br />
-                <br /> Film info <br /> More info <br /> Much more info
+                <br /> {props.itemActiveFilms.overview}
                 </p>
         </div>
     </div>
