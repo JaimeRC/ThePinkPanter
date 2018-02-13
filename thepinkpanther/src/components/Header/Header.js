@@ -3,7 +3,7 @@
 import React, {Component} from 'react'
 import pinkPanterApi from '../../movieApi.js'
 
-class Search extends Component {
+class Header extends Component {
     constructor() {
         super();
         this.state = {
@@ -32,4 +32,4 @@ getInfo = (e) => {
 
 
 
-export default Search
+export default Header
