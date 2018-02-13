@@ -4,7 +4,7 @@ import './styles/main.css'
 function Carousel(props) {
     return (
         <div>
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+            <div id={props.title} className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                
                     <div className="carousel-item active">
@@ -27,11 +27,11 @@ function Carousel(props) {
                         )
                     })}
                 </div>
-                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <a className="carousel-control-prev" href={`#${props.title}`} role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true" />
                     <span className="sr-only">Previous</span>
                 </a>
-                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <a className="carousel-control-next" href={`#${props.title}`} role="button" data-slide="next">
                     <span className="carousel-control-next-icon" aria-hidden="true" />
                     <span className="sr-only">Next</span>
                 </a>
