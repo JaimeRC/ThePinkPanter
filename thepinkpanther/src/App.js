@@ -12,7 +12,8 @@ class App extends Component {
       films: [],
       itemActiveFilms: [],
       series: [],
-      itemActiveSeries: []
+      itemActiveSeries: [],
+      item: []
     }
   }
 
@@ -24,12 +25,13 @@ class App extends Component {
       .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
   }
 
-  showItem = (id) => {
-
+  showItem = (type, id) => {
+    console.log(type + "  " + id);
+    pinkPanterApi.getDetaillsIdType(type, id)
+      .then(item => console.log(item))
   }
 
   render() {
-    console.log(this.state.series)
     return (
       <div className="App">
         <header className="App-header">
@@ -62,7 +64,8 @@ class App extends Component {
             <Carousel
               films={this.state.films}
               itemActiveFilms={this.state.itemActiveFilms}
-              title={"Pelicula"}
+              title={"movie"}
+              onShowItem={this.showItem}
             />
           </section>
           <section>
@@ -72,7 +75,8 @@ class App extends Component {
             <Carousel
               films={this.state.series}
               itemActiveFilms={this.state.itemActiveSeries}
-              title={"Series"}
+              title={"tv"}
+              onShowItem={this.showItem}
             />
           </section>
         </main>
