@@ -18,13 +18,18 @@ class App extends Component {
 
   componentWillMount() {
     pinkPanterApi.getTypePopular('movie', 1)
-      .then(films => this.setState({  itemActiveFilms: films.shift(), films }))
+      .then(films => this.setState({ itemActiveFilms: films.shift(), films }))
 
     pinkPanterApi.getTypePopular('tv', 1)
       .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
   }
 
+  showItem = (id) => {
+
+  }
+
   render() {
+    console.log(this.state.series)
     return (
       <div className="App">
         <header className="App-header">
@@ -45,28 +50,31 @@ class App extends Component {
                   <a className="nav-link" href="#">Series</a>
                 </li>
               </ul>
-                <Header />
-             </div>
+              <Header />
+            </div>
           </nav>
         </header>
         <main>
           <section>
             <header>
-              <Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>
+              <Jumbotron title={"Peliculas"} />
             </header>
-            <Carousel 
+            <Carousel
               films={this.state.films}
               itemActiveFilms={this.state.itemActiveFilms}
-             />
+              onShowItem={this.showItem}
+              title={"Pelicula"}
+            />
           </section>
           <section>
             <header>
-              <Jumbotron onShowCards={this.showCards} title={"Series"}/>
+              <Jumbotron title={"Series"} />
             </header>
-            <Carousel 
+            <Carousel
               films={this.state.series}
               itemActiveFilms={this.state.itemActiveSeries}
-             />
+              title={"Series"}
+            />
           </section>
         </main>
         <footer className="footer">
