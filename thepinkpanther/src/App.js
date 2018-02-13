@@ -8,6 +8,10 @@ import { HashRouter, Route } from 'react-router-dom'
 class App extends Component {
 
 
+  showItem = (id) => {
+
+  }
+
   render() {
     return (<HashRouter>
       
