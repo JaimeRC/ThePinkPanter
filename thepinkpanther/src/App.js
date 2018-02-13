@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Carousel from './components/Carousel'
+import Carousel from './components/Carousel';
+import Jumbotron from './components/Jumbotron';
 import pinkPanterApi from './pinkPanterApi.js';
 import Header from './components/Header';
-import Jumbotron from './components/Jumbotron';
 import logo from './logo.png';
 
 class App extends Component {
