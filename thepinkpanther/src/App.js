@@ -45,14 +45,14 @@ class App extends Component {
                   <a className="nav-link" href="#">Series</a>
                 </li>
               </ul>
-                <Search />
+                {/*<Search />*/}
              </div>
           </nav>
         </header>
         <main>
           <section>
             <header>
-            <Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>
+            {/*<Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>*/}
             </header>
             <Carousel 
             films={this.state.films}
