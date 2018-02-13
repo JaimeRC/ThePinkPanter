@@ -3,6 +3,7 @@ import './main.css';
 import Carousel from '../Carousel'
 import Jumbotron from '../Jumbotron'
 import pinkPanterApi from '../../pinkPanterApi.js';
+import logo from './logo.png';
 
 
 class Home extends Component {
@@ -40,6 +41,14 @@ class Home extends Component {
                         title={"Pelicula"}
                     />
                 </section>
+
+                <section className="logo">
+                    <img src={logo} className="img-fluid" alt="logo" width='30%' />
+                    <p className="mgt10">Más de 10.000 titulos disponibles para nuestros clientes</p>
+                    <button class="btn btn-outline-success my-2 my-sm-0 mrr10">Peliculas</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">Series</button>
+                </section>
+
                 <section>
                     <header>
                         <Jumbotron title={"Series"} />
