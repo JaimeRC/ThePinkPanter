@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './styles/card.css';
-import movieApi from 'movieApi';
+import pinkPanterApi from './pinkPanterApi';
 
 
-const Card = (props) => {
+function Card(props) {
     <div className="flip-container">
         <div className="front">
             <img src="" alt="" />
