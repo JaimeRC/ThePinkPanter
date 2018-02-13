@@ -4,6 +4,7 @@ import Carousel from './components/Carousel'
 import pinkPanterApi from './pinkPanterApi.js';
 import Header from './components/Header';
 import Jumbotron from './components/Jumbotron';
+import logo from './logo.png';
 
 class App extends Component {
   constructor() {
@@ -57,7 +58,7 @@ class App extends Component {
         <main>
           <section>
             <header>
-              <Jumbotron title={"Peliculas"} />
+              <Jumbotron title={"Peliculas Destacadas"} />
             </header>
             <Carousel
               films={this.state.films}
@@ -66,9 +67,15 @@ class App extends Component {
               title={"Pelicula"}
             />
           </section>
+          <section className="logo">
+            <img src={logo} className="img-fluid" alt="logo" width='30%'/>
+            <p className="mgt10">Más de 10.000 titulos disponibles para nuestros clientes</p>
+            <button class="btn btn-outline-success my-2 my-sm-0 mrr10">Peliculas</button>
+            <button class="btn btn-outline-success my-2 my-sm-0">Series</button>
+          </section>
           <section>
             <header>
-              <Jumbotron title={"Series"} />
+              <Jumbotron title={"Series Destacadas"} />
             </header>
             <Carousel
               films={this.state.series}

@@ -26,3 +26,17 @@
   height: 30px;
   background-color: hotpink
 }
+
+.logo{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.mgt10{
+  margin-top: 10px;
+}
+
+.mrr10{
+  margin-right: 10px;
+}
