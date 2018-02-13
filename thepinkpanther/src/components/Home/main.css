@@ -1,0 +1,26 @@
+.logo{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #FF0198;
+  }
+  
+  .mgt10{
+    margin-top: 10px;
+  }
+  
+  .mrr10{
+    margin-right: 10px;
+  }
+
+  .logo > button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  .logo > button:hover{
+    color: black;
+    border: 1px solid black;
+    transition: all 0.6s;
+  }
