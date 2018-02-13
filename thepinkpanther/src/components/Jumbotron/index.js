@@ -4,12 +4,9 @@ function Jumbotron(props) {
     return (
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
-                <h1 className="display-4"><a onClick={(e) => {
-                    props.onShowCards()
-                }}>{props.title}</a></h1>
+                <h1 className="display-4">{props.title}</h1>
             </div>
         </div>
-
     )
 }
 
