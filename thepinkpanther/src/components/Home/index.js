@@ -22,7 +22,9 @@ class Home extends Component {
         pinkPanterApi.getTypePopular('tv', 1)
             .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
     }
-    showItem = (id) => {
+    showItem = (type, id) => {
+        pinkPanterApi.getDetaillsIdType(type, id)
+            .then(item => console.log(item))
     }
 
 
@@ -38,7 +40,7 @@ class Home extends Component {
                         films={this.state.films}
                         itemActiveFilms={this.state.itemActiveFilms}
                         onShowItem={this.showItem}
-                        title={"Pelicula"}
+                        title={"movie"}
                     />
                 </section>
 
@@ -56,7 +58,8 @@ class Home extends Component {
                     <Carousel
                         films={this.state.series}
                         itemActiveFilms={this.state.itemActiveSeries}
-                        title={"Series"}
+                        title={"tv"}
+                        onShowItem={this.showItem}
                     />
                 </section>
             </main>
