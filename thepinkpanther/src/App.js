@@ -1,37 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
+<<<<<<< HEAD
 import Carousel from './components/Carousel'
 import pinkPanterApi from './pinkPanterApi.js';
 import Jumbotron from './components/Jumbotron'
 import Header from './components/Header'
+=======
+import Header from './components/Header';
+import Main from './components/Main'
+import { HashRouter, Route } from 'react-router-dom'
+>>>>>>> c6fe5902814fe0fb5ba4619e33ec919975280ef2
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      films: [],
-      itemActiveFilms: [],
-      series: [],
-      itemActiveSeries: []
-    }
-  }
-
-  componentWillMount() {
-    pinkPanterApi.getTypePopular('movie', 1)
-      .then(films => this.setState({ itemActiveFilms: films.shift(), films }))
-
-    pinkPanterApi.getTypePopular('tv', 1)
-      .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
-  }
-
-  showItem = (id) => {
-
-  }
 
   render() {
-    console.log(this.state.series)
-    return (
+    return (<HashRouter>
+      
       <div className="App">
+<<<<<<< HEAD
         <header className="App-header">
           <nav id="header" className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a className="navbar-brand" href="#">Movie & Serie</a>
@@ -78,7 +64,13 @@ class App extends Component {
         </main>
         <footer className="footer">
         </footer>
+=======
+        <Header />
+        <Main />
+        {/* <Footer /> */}
+>>>>>>> c6fe5902814fe0fb5ba4619e33ec919975280ef2
       </div>
+      </HashRouter>
     );
   }
 }
