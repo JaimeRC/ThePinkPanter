@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/card.css';
-import movieApi from 'movieApi';
+import pinkPanterApi from './pinkPanterApi';
 
 
 const Card = (props) => {

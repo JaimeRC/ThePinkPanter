@@ -1,14 +1,15 @@
-'use strict'
+
 // import movieApi from '../../movieApi';
 import React, {Component} from 'react'
-import pinkPanterApi from '../../movieApi.js'
+import pinkPanterApi from '../../../pinkPanterApi.js';
 
-class Header extends Component {
+class Search extends Component {
     constructor() {
         super();
         this.state = {
             query:'',
             movies:''
+            
         }
     }
 
@@ -17,7 +18,8 @@ keepInput = (e) => this.setState({ query: e.target.value })
 getInfo = (e) => {
     e.preventDefault();
     pinkPanterApi.getSearch(this.state.query)
-    .then(info => console.log(info))
+    .then(info => {movies: info})
+    this.setState = { query: '' }
 }
 
     render() {
@@ -32,4 +34,4 @@ getInfo = (e) => {
 
 
 
-export default Header
+export default Search
