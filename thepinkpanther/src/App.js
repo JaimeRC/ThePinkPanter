@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Carousel from './components/Carousel'
-import Jumbotron from './components/Jumbotron'
 import pinkPanterApi from './pinkPanterApi.js';
+import Header from './components/Header';
+import Jumbotron from './components/Jumbotron';
 
 class App extends Component {
   constructor() {
@@ -30,12 +31,13 @@ class App extends Component {
   render() {
     console.log(this.state.series)
     return (
-      <div>
-        <header>
+      <div className="App">
+        <header className="App-header">
           <nav id="header" className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a className="navbar-brand" href="#">Movie &amp; Serie</a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon" />
+            <a className="navbar-brand" href="#">Movie & Serie</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav mr-auto">
@@ -47,14 +49,8 @@ class App extends Component {
                 <li className="nav-item">
                   <a className="nav-link" href="#">Series</a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link disabled" href="#">Otros</a>
-                </li>
               </ul>
-              <form className="form-inline mt-2 mt-md-0">
-                <input className="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search" />
-                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-              </form>
+              <Header />
             </div>
           </nav>
         </header>

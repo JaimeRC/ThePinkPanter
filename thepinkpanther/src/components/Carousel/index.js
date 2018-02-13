@@ -19,7 +19,8 @@ function Carousel(props) {
                             <div className="carousel-item">
                                 <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${film.backdrop_path}`} />
                                 <div className="carousel-caption d-none d-md-block">
-                                    <h5>{(film.title) ? film.title : film.name}</h5>
+                                    <h5>{(film.title) ? props.title : props.name}</h5>
+                                    <p>{film.overview}</p>
                                 </div>
                             </div>
                         )

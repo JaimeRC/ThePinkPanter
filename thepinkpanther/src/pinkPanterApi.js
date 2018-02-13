@@ -20,6 +20,12 @@ let pinkPanterApi;
         getDetaillsIdType: function(type,id){
             let path = baseUrl + type + '/' + id + token 
             return this.call(path).then(res => res)
+        },
+
+        getSearch: function(query) {
+            let path = baseUrl + 'search/multi' + token + '&language=es' + '&query=' + query
+            console.log(path)
+            return this.call(path).then(res => res)       
         }
     }
 })()
