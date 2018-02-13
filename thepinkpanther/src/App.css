@@ -1,11 +1,11 @@
 
 .btn-outline-success{
-  color:hotpink !important;
-  border-color: hotpink !important;
+  color:#FF0198 !important;
+  border-color: #FF0198 !important;
 }
   
 .btn-outline-success:hover{
-  background-color: hotpink;
+  background-color: #FF0198;
   color: gray !important;
   border-color: gray !important;
 }
@@ -20,9 +20,4 @@
 .carousel-inner img {
   width: 100%;
   max-height: 500px;
-}
-
-.footer{
-  height: 30px;
-  background-color: hotpink
 }

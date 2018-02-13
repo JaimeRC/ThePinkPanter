@@ -1,4 +1,4 @@
-.carousel-inner img {
+.carousel-inner > img {
     margin-top: 150px;
     transform: scaleY(1.6)
   }

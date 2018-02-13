@@ -4,7 +4,7 @@ import pinkPanterApi from './pinkPanterApi';
 
 
 function Card(props) {
-    <div className="flip-container">
+    return (<div className="flip-container">
         <div className="front">
             <img src="" alt="" />
             <div className="footer">
@@ -19,7 +19,7 @@ function Card(props) {
                 <br /> Film info <br /> More info <br /> Much more info
                 </p>
         </div>
-    </div>
+    </div>)
 }
 
 
