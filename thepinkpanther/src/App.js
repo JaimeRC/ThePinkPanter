@@ -4,6 +4,7 @@ import Carousel from './components/Carousel'
 import pinkPanterApi from './pinkPanterApi.js';
 import Jumbotron from './components/Jumbotron'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 class App extends Component {
   constructor() {
@@ -80,8 +81,7 @@ class App extends Component {
             />
           </section>
         </main>
-        <footer className="footer">
-        </footer>
+        <Footer />
       </div>
     );
   }
