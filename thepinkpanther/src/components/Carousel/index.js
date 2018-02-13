@@ -7,7 +7,7 @@ function Carousel(props) {
             <div id={props.title} className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} />
+                        <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`}  />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</h5>
                             <p>{props.itemActiveFilms.overview}</p>

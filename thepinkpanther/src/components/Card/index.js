@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './styles/card.css';
-import pinkPanterApi from './pinkPanterApi';
+import './main.css';
+import pinkPanterApi from '../../pinkPanterApi';
 
 
 function Card(props) {
