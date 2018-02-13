@@ -3,7 +3,7 @@ import './styles/card.css';
 import pinkPanterApi from './pinkPanterApi';
 
 
-const Card = (props) => {
+function Card(props) {
     <div className="flip-container">
         <div className="front">
             <img src="" alt="" />
