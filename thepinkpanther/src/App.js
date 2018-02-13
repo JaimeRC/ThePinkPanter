@@ -4,9 +4,7 @@ import Header from './components/Header';
 import Main from './components/Main'
 import { HashRouter } from 'react-router-dom'
 
-
 class App extends Component {
-
 
   render() {
     return (<HashRouter>
