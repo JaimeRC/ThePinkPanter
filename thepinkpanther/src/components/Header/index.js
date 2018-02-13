@@ -1,7 +1,7 @@
 'use strict'
 // import movieApi from '../../movieApi';
 import React, {Component} from 'react'
-import pinkPanterApi from '../../movieApi.js'
+import pinkPanterApi from '../../pinkPanterApi.js'
 
 class Header extends Component {
     constructor() {

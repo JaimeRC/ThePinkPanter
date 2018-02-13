@@ -3,7 +3,7 @@ import './App.css';
 import Carousel from './components/Carousel'
 import pinkPanterApi from './pinkPanterApi.js';
 import Header from './components/Header';
-import Jumbotron from './components/Jumbotron'
+import Jumbotron from './components/Jumbotron';
 
 class App extends Component {
   constructor() {
@@ -45,31 +45,27 @@ class App extends Component {
                   <a className="nav-link" href="#">Series</a>
                 </li>
               </ul>
-                {/*<Search />*/}
+                <Header />
              </div>
           </nav>
         </header>
         <main>
           <section>
             <header>
-            {/*<Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>*/}
+              <Jumbotron onShowCards={this.showCards} title={"Peliculas"}/>
             </header>
             <Carousel 
-            films={this.state.films}
-            itemActiveFilms={this.state.itemActiveFilms}
+              films={this.state.films}
+              itemActiveFilms={this.state.itemActiveFilms}
              />
           </section>
           <section>
             <header>
-              <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                  <h1 className="display-4">Series</h1>
-                </div>
-              </div>
+              <Jumbotron onShowCards={this.showCards} title={"Series"}/>
             </header>
             <Carousel 
-            films={this.state.series}
-            itemActiveFilms={this.state.itemActiveSeries}
+              films={this.state.series}
+              itemActiveFilms={this.state.itemActiveSeries}
              />
           </section>
         </main>
