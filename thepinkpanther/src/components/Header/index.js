@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-'use strict'
-// import movieApi from '../../movieApi';
-import React, { Component } from 'react'
-import pinkPanterApi from '../../pinkPanterApi.js'
-import './styles/main.css'
-
-class Header extends Component {
-    constructor() {
-        super();
-        this.state = {
-            query: '',
-            movies: ''
-        }
-    }
-
-    keepInput = (e) => this.setState({ query: e.target.value })
-
-    getInfo = (e) => {
-        e.preventDefault();
-        pinkPanterApi.getSearch(this.state.query)
-            .then(info => console.log(info))
-    }
-
-    render() {
-        return <div>
-            <form className="form-inline" onSubmit={this.getInfo}>
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={this.keepInput} />
-                <button id="Find" className="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
-        </div>
-    }
-=======
 import React, { Component } from 'react'
 import Search from './Search';
 import { NavLink } from 'react-router-dom'
@@ -63,7 +30,6 @@ function Header(props) {
             </div>
         
     )
->>>>>>> c6fe5902814fe0fb5ba4619e33ec919975280ef2
 }
 
 
