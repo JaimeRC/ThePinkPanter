@@ -6,17 +6,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.btn-outline-success{
-  color:#FF0198 !important;
-  border-color: #FF0198 !important;
-}
-  
-.btn-outline-success:hover{
-  background-color: #FF0198;
-  color: gray !important;
-  border-color: gray !important;
-}
-
 .jumbotron-fluid{
   margin-bottom: 0px;
   padding-bottom: 0px;

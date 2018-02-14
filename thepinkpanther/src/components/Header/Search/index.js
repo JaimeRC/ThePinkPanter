@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import pinkPanterApi from '../../../pinkPanterApi.js';
 import { withRouter } from 'react-router-dom'
+import './main.css'
 
 class Search extends Component {
     constructor() {
