@@ -35,7 +35,6 @@ class Results extends React.Component {
     render() {
         return (
             <div>
-                <h1>Alex Feoooo</h1>
                 <h1>{this.props.match.params.query}</h1>
                 <div className='container'>
                     <div className='card-deck'>

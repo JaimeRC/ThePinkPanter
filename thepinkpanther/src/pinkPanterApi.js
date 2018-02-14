@@ -28,13 +28,14 @@ let pinkPanterApi;
         },
 
         getCast: function (type, id) {
-            let path = baseUrl + type + '/' + id + 'credits' + token
-            return this.call(path).then(res => res)
+            let path = baseUrl + type + '/' + id + '/credits' + token
+            console.log(path)
+            return this.call(path).then(res => res.cast)
         },
 
         getVideos: function (type, id) {
-            let path = baseUrl + type + '/' + id + 'videos' + token
-            return this.call(path).then(res => res)
+            let path = baseUrl + type + '/' + id + '/videos' + token
+            return this.call(path).then(res => res.results[0].key)
         }
 
     }

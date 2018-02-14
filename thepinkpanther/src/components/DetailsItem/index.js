@@ -1,35 +1,38 @@
-import React, { Componnent } from 'react'
+import React, { Component } from 'react'
 import './styles/main.css'
+import pinkPanterApi from '../../pinkPanterApi';
 import Jumbotron from '../Jumbotron'
 import ItemResume from '../ItemResume'
 import ItemCast from '../ItemCast'
 import ItemTrailer from '../ItemTrailer'
 
-class DetailsItem extends Comment {
+class DetailsItem extends React.Component {
     constructor() {
         super()
         this.state = {
-            item: []
+            item: {}
         }
     }
 
-    showItem = (type, id) => {
-        pinkPanterApi.getDetaillsIdType(type, id)
+    componentWillMount() {
+        pinkPanterApi.getDetaillsIdType(this.props.match.params.type, this.props.match.params.id)
             .then(item => this.setState({ item }))
     }
 
     render() {
+        console.log(this.state.item)
         return (
             <div>
-                <Jumbotron title={(props.item.title) ? props.item.title : props.item.name} />
+                <Jumbotron title={(this.state.item.title) ? this.state.item.title : this.state.item.name} />
 
-                <ItemResume item={props.item} />
+                <ItemResume item={this.state.item} />
 
-                <ItemCast idItem={props.item.id} type={props.type} />
+                <ItemCast idItem={this.props.match.params.id} type={this.props.match.params.type} />
 
-                <ItemTrailer idItem={props.item.id} type={props.type} />
+                <ItemTrailer idItem={this.props.match.params.id} type={this.props.match.params.type} />
 
             </div>
+
         )
     }
 }

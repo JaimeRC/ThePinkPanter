@@ -1,8 +1,8 @@
-import React, { Componnent, Component } from 'react'
+import React, { Component } from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi.js';
 
-class ItemCast extends Component {
+class ItemCast extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -10,15 +10,13 @@ class ItemCast extends Component {
         }
     }
 
-    componentWillMount(){
-        /*console.log(props.type)*/
-        /*
-        pinkPanterApi.getCredits(props.type, props.idItem)
-            .then(cast => {cast})
-            */
+    componentWillMount() {
+        pinkPanterApi.getCast(this.props.type, this.props.idItem)
+            .then(cast => this.setState({ cast }))
     }
 
     render() {
+        console.log(this.state.cast)
         return (
             <div id="reviews" className="container">
                 <ul>

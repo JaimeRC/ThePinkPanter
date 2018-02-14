@@ -6,6 +6,7 @@ import pinkPanterApi from '../../pinkPanterApi.js';
 import logo from './logo.png';
 
 
+
 function Home(props) {
     return (
         <main>
@@ -16,7 +17,6 @@ function Home(props) {
                 <Carousel
                     films={props.films}
                     itemActiveFilms={props.itemActiveFilms}
-                    onShowItem={props.onShowItem}
                     title={"movie"}
                 />
             </section>
@@ -36,7 +36,6 @@ function Home(props) {
                     films={props.series}
                     itemActiveFilms={props.itemActiveSeries}
                     title={"tv"}
-                    onShowItem={props.onShowItem}
                 />
             </section>
         </main>

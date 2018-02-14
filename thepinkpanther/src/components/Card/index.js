@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './main.css';
-import pinkPanterApi from '../../pinkPanterApi';
 
 
 function Card(props) {

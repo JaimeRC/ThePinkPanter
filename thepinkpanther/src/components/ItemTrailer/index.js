@@ -1,27 +1,26 @@
-import React, { Componnent, Component } from 'react'
+import React, { Component } from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi.js';
 
-class ItemTrailer extends Component {
+
+class ItemTrailer extends React.Component {
     constructor() {
         super()
         this.state = {
-            video: []
+            video: ""
         }
     }
 
     componentWillMount() {
-        /*console.log(props.type)*/
-        /*
-        pinkPanterApi.getVideos(props.type, props.idItem)
-            .then(video => { video: video.results })
-            */
+        pinkPanterApi.getVideos(this.props.type, this.props.idItem)
+            .then(video => this.setState({ video }))
     }
+
 
     render() {
         return (
             <div id="trailer" className="d-flex justify-content-center">
-                <iframe id="ytplayer" type="text/html" width={640} height={360} src={`http://www.youtube.com/embed/${this.state.video[0].id}`} frameBorder={0} />
+                <iframe id="ytplayer" type="text/html" width={640} height={360} src={`http://www.youtube.com/embed/${this.state.video}`} frameBorder={0} />
             </div>
         )
     }

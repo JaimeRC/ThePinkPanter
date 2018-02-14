@@ -1,4 +1,4 @@
-import React, { Componnent } from 'react'
+import React, { Component } from 'react'
 import './styles/main.css'
 
 function ItemResume(props) {
