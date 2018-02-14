@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
-import SearchWithRouter from './Search';
+import React from 'react'
+import SearchWithRouter from '../Search';
 import { NavLink } from 'react-router-dom'
 
 function Header(props) {
-
     return (
-        
             <div className="App">
                 <header className="App-header">
                     <nav id="header" className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

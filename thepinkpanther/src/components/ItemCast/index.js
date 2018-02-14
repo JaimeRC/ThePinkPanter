@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi.js';
 
@@ -16,13 +16,12 @@ class ItemCast extends React.Component {
     }
 
     render() {
-        console.log(this.state.cast)
         return (
             <div id="reviews" className="container">
                 <ul>
                     {this.state.cast.map(actor => {
                         return (
-                            <li><img className="cast" src={`http://image.tmdb.org/t/p/w500/${actor.profile_path}`} />{actor.name}</li>
+                            <li key={actor.id}><img className="cast" src={`http://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt={actor.name}/>{actor.name}</li>
                         )
                     })}
                 </ul>

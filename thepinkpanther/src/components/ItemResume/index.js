@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './styles/main.css'
 
 function ItemResume(props) {
@@ -7,7 +7,7 @@ function ItemResume(props) {
             <div className="row">
                 <div className="col">
                     <section>
-                        <img className="img-thumbnail" src={`http://image.tmdb.org/t/p/w500/${props.item.poster_path}`} />
+                        <img className="img-thumbnail" src={`http://image.tmdb.org/t/p/w500/${props.item.poster_path}`} alt={props.item.id} />
                     </section>
                 </div>
                 <div className="col">

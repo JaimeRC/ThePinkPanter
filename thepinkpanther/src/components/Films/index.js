@@ -1,7 +1,6 @@
-'use strict'
 import React from 'react'
 import Card from '../Card';
-import './main.css'
+import './styles/main.css'
 
 
 function Films(props) {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import pinkPanterApi from '../../pinkPanterApi';
 import Card from '../Card';
 import Pagination from "react-js-pagination";
@@ -34,7 +34,6 @@ class Results extends React.Component {
     }
 
     render() {
-        console.log(this.state.search)
         return (
             <div>
                 <h1>{this.props.match.params.query}</h1>

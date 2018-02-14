@@ -1,7 +1,4 @@
-
-// import movieApi from '../../movieApi';
-import React, { Component } from 'react'
-import pinkPanterApi from '../../../pinkPanterApi.js';
+import React, {Component} from 'react'
 import { withRouter } from 'react-router-dom'
 
 class Search extends Component {

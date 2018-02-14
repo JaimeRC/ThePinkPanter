@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi.js';
 
@@ -15,7 +15,6 @@ class ItemTrailer extends React.Component {
         pinkPanterApi.getVideos(this.props.type, this.props.idItem)
             .then(video => this.setState({ video }))
     }
-
 
     render() {
         return (

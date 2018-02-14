@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './styles/main.css'
 import withRouter from 'react-router-dom/withRouter';
 
@@ -15,27 +15,26 @@ class Carousel extends React.Component {
     }
 
     render() {
-        let type = this.props.title;
         return (
             <div>
-                <div id={type} className="carousel slide" data-ride="carousel">
+                <div id={this.props.title} className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${this.props.itemActiveFilms.backdrop_path}`} alt={(this.props.itemActiveFilms.title) ? this.props.itemActiveFilms.title : this.props.itemActiveFilms.name} />
+                        <div key={this.props.itemActive.id} className="carousel-item active">
+                            <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${this.props.itemActive.backdrop_path}`} alt={(this.props.itemActive.title) ? this.props.itemActive.title : this.props.itemActive.name} />
                             <div className="carousel-caption d-none d-md-block">
-                                <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); this.idItem(type, this.props.itemActiveFilms.id) }}>
-                                    <h6>{(this.props.itemActiveFilms.title) ? this.props.itemActiveFilms.title : this.props.itemActiveFilms.name}</h6>
+                                <button type="button" className="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); this.idItem(this.props.title, this.props.itemActive.id) }}>
+                                    <h6>{(this.props.itemActive.title) ? this.props.itemActive.title : this.props.itemActive.name}</h6>
                                 </button>
                             </div>
                         </div>
 
-                        {this.props.films.map(film => {
+                        {this.props.items.map(item => {
                             return (
-                                <div className="carousel-item">
-                                    <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${film.backdrop_path}`} alt={(this.props.itemActiveFilms.title) ? this.props.itemActiveFilms.title : this.props.itemActiveFilms.name} />
+                                <div key={item.id} className="carousel-item">
+                                    <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${item.backdrop_path}`} alt={(item.title) ? item.title : item.name} />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); this.idItem(type, film.id) }}>
-                                            <h5>{film.title ? film.title : film.name}</h5>
+                                        <button type="button" className="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); this.idItem(this.props.title, item.id) }}>
+                                            <h5>{item.title ? item.title : item.name}</h5>
                                         </button>
                                     </div>
                                 </div>
@@ -54,6 +53,7 @@ class Carousel extends React.Component {
             </div>
         )
     }
+
 }
 
 

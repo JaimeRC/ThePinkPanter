@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi';
 import Jumbotron from '../Jumbotron'
@@ -20,7 +20,6 @@ class DetailsItem extends React.Component {
     }
 
     render() {
-        console.log(this.state.item)
         return (
             <div>
                 <Jumbotron title={(this.state.item.title) ? this.state.item.title : this.state.item.name} />

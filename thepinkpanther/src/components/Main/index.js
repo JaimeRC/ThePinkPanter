@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { HashRouter, Route, NavLink, withRouter } from 'react-router-dom'
+import React, {Component} from 'react'
+import { Route } from 'react-router-dom'
 import pinkPanterApi from '../../pinkPanterApi.js';
 import Home from '../Home';
 import Films from '../Films';
