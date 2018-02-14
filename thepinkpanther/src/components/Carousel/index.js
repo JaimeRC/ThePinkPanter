@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './styles/main.css'
 import withRouter from 'react-router-dom/withRouter';
 
-<<<<<<< HEAD
 class Carousel extends React.Component {
     constructor() {
         super()
@@ -28,25 +27,8 @@ class Carousel extends React.Component {
                                     <h6>{(this.props.itemActiveFilms.title) ? this.props.itemActiveFilms.title : this.props.itemActiveFilms.name}</h6>
                                 </button>
                             </div>
-=======
-function Carousel(props) {
-    let type = props.title;
-    return (
-        <div>
-            <div id={type} id="carousel1" className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt={(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name} />
-                        <div className="carousel-caption d-none d-md-block">
-                       
-                            <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); props.onShowItem(type, props.itemActiveFilms.id) }}>
-                                <h6>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</h6>
-                            </button>
-                        
->>>>>>> develop
                         </div>
 
-<<<<<<< HEAD
                         {this.props.films.map(film => {
                             return (
                                 <div className="carousel-item">
@@ -56,16 +38,6 @@ function Carousel(props) {
                                             <h5>{film.title ? film.title : film.name}</h5>
                                         </button>
                                     </div>
-=======
-                    {props.films.map(film => {
-                        return (
-                            <div id="carousel2" className="carousel-item">
-                                <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${film.backdrop_path}`} alt={(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name} />
-                                <div className="carousel-caption d-none d-md-block">
-                                    <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); props.onShowItem(type, film.id) }}>
-                                        <h5>{film.title ? film.title : film.name}</h5>
-                                    </button>
->>>>>>> develop
                                 </div>
                             )
                         })}

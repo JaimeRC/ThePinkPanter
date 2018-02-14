@@ -14,25 +14,27 @@ class Results extends React.Component {
     }
 
     loadSearch(query, page) {
-        pinkPanterApi.getSearch(query, page).then(search => this.setState({ search }))
+        pinkPanterApi.getSearch(query, page)
+            .then(search => this.setState({ search }))
     }
 
     componentWillMount() {
-        this.setState(prevState => {activePage:1})
+        this.setState(prevState => { activePage: 1 })
         this.loadSearch(this.props.match.params.query, this.state.activePage)
     }
 
     componentWillReceiveProps(props) {
-        this.setState({activePage:1})
+        this.setState({ activePage: 1 })
         this.loadSearch(props.match.params.query, this.state.activePage)
     }
 
     handlePageChange = (pageNumber) => {
-        this.setState({activePage: pageNumber})
+        this.setState({ activePage: pageNumber })
         this.loadSearch(this.props.match.params.query, this.state.activePage)
     }
 
     render() {
+        console.log(this.state.search)
         return (
             <div>
                 <h1>{this.props.match.params.query}</h1>

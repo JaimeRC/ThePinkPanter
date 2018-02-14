@@ -2,5 +2,17 @@
     color: white;
     height: 500px;
     background-color: #FF0198 !important;
-    
+    overflow: hidden;
+    padding: 20px;
+}
+
+.cast{
+    width: 5%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+li{
+    display: inline;
+    margin: 20px;
 }

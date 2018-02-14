@@ -24,7 +24,7 @@ let pinkPanterApi;
 
         getSearch: function (query) {
             let path = baseUrl + 'search/multi' + token + '&language=es' + '&query=' + query
-            return this.call(path).then(res => res)
+            return this.call(path).then(res => res.results)
         },
 
         getCast: function (type, id) {
