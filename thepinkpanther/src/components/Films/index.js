@@ -6,9 +6,9 @@ import Card from '../Card';
 function Films(props) {
         return (
             <div className="container">
-            {props.film.map(info => {
+            {props.films.map(film => {
                 return (
-                    <Card />
+                    <Card itemActiveFilms={film}/>
                 )
             })}
                 

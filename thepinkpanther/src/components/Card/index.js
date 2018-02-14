@@ -8,13 +8,13 @@ function Card(props) {
         <div className="front">
             <img src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt="" />
             <div className="footer">
-                <p><strong>{props.itemActiveFilms.title}</strong><br />
+                <p><strong>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</strong><br />
                     Film category
                 </p>
             </div>
         </div>
         <div className="back">
-            <p><strong>{props.itemActiveFilms.title}</strong>
+            <p><strong>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</strong>
                 <br />
                 <br /> {props.itemActiveFilms.overview}
                 </p>
