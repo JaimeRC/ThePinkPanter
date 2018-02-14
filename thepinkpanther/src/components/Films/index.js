@@ -6,12 +6,13 @@ import Card from '../Card';
 function Films(props) {
         return (
             <div className="container">
-            {props.films.map(film => {
-                return (
-                    <Card itemActiveFilms={film}/>
-                )
-            })}
-                
+                <div className='card-deck'>
+                    {props.films.map(film => {
+                        return (
+                            <Card itemActiveFilms={film}/>
+                        )
+                    })}
+                </div>
             </div>
                     
         )

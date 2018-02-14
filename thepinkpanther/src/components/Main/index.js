@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { HashRouter, Route, NavLink, withRouter } from 'react-router-dom'
 import pinkPanterApi from '../../pinkPanterApi.js';
 import Home from '../Home';
 import Films from '../Films';
+import Results from '../Results'
 
 class Main extends Component {
     constructor() {
@@ -14,12 +15,14 @@ class Main extends Component {
             itemActiveSeries: []
         }
     }
+
     componentWillMount() {
         pinkPanterApi.getTypePopular('movie', 1)
             .then(films => this.setState({ itemActiveFilms: films.shift(), films }))
         pinkPanterApi.getTypePopular('tv', 1)
             .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
     }
+
     showItem = (type, id) => {
         pinkPanterApi.getDetaillsIdType(type, id)
             .then(item => console.log(item))
@@ -48,6 +51,8 @@ class Main extends Component {
                 <Films
                 films={this.state.series}
                 />)}/>
+                
+                <Route path="/search/:query" component={Results} />
 
             </div>)
     }

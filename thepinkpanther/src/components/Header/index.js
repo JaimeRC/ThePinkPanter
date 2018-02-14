@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Search from './Search';
+import SearchWithRouter from './Search';
 import { NavLink } from 'react-router-dom'
 
 function Header(props) {
@@ -23,7 +23,7 @@ function Header(props) {
                                 <NavLink className="nav-link" to="/TV" activeClassName="active">Series</NavLink>
                                 </li>
                             </ul>
-                            <Search />
+                            <SearchWithRouter />
                         </div>
                     </nav>
                 </header>
