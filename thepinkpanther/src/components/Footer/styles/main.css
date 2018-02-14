@@ -1,5 +1,26 @@
 .footer{
+    height: 100px;
     background-color: #424247;
-    color: #FF0198;
-    
+    color:white
+}
+
+.imgFooter{
+    width: 130px;
+    height: 60px ;
+    padding-top: 10px;
+    margin-top: 10px
+}
+
+.imgSkyFooter{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    margin-top: 10px
+}
+
+.col-sm-4{
+    display: line-block;
+}
+.col-sm-8{
+    font-size: 12px;
 }
