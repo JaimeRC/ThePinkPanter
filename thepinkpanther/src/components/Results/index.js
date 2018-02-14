@@ -4,7 +4,6 @@ import Card from '../Card';
 import Pagination from "react-js-pagination";
 
 class Results extends React.Component {
-
     constructor() {
         super()
         this.state = {
@@ -39,9 +38,9 @@ class Results extends React.Component {
                 <h1>{this.props.match.params.query}</h1>
                 <div className='container'>
                     <div className='card-deck'>
-                        {this.state.search.map(film => {
+                        {this.state.search.map(item => {
                             return (
-                                <Card itemActiveFilms={film} />
+                                <Card item={item} />
                             )
                         })}
                     </div>

@@ -2,7 +2,6 @@ import React from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi.js';
 
-
 class ItemTrailer extends React.Component {
     constructor() {
         super()
@@ -24,6 +23,5 @@ class ItemTrailer extends React.Component {
         )
     }
 }
-
 
 export default ItemTrailer

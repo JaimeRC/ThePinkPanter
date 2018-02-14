@@ -21,7 +21,7 @@ class ItemCast extends React.Component {
                 <ul>
                     {this.state.cast.map(actor => {
                         return (
-                            <li key={actor.id}><img className="cast" src={`http://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt={actor.name}/>{actor.name}</li>
+                            <li key={actor.id}><img className="cast" src={`http://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt={actor.name} />{actor.name}</li>
                         )
                     })}
                 </ul>

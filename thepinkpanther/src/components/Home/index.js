@@ -36,9 +36,7 @@ function Home(props) {
                 />
             </section>
         </main>
-
     )
-
 }
 
 export default Home;

@@ -20,7 +20,6 @@ function ItemResume(props) {
                 </div>
             </div>
         </div>
-
     )
 }
 

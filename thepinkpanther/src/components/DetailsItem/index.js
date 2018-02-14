@@ -29,9 +29,7 @@ class DetailsItem extends React.Component {
                 <ItemCast idItem={this.props.match.params.id} type={this.props.match.params.type} />
 
                 <ItemTrailer idItem={this.props.match.params.id} type={this.props.match.params.type} />
-
             </div>
-
         )
     }
 }
