@@ -2,7 +2,18 @@ import React, { Component } from 'react'
 import Search from './Search';
 import { NavLink } from 'react-router-dom'
 
+<<<<<<< HEAD
 function Header(props) {
+=======
+class Header extends Component {
+    constructor() {
+        super();
+        this.state = {
+            query:'',
+            movies: ''
+        }
+    }
+>>>>>>> 64ac4f341cbb8a31c807f2cc33e342c1b7f9b733
 
     return (
         
