@@ -11,7 +11,6 @@
 
 .flip-container {
     margin: 20px;
-    cursor: pointer;
     width: 240px;
     height: 340px;
     
@@ -99,6 +98,27 @@ h3 {
     text-align: center;
     color: #FF0198;
 }
+
+.back button {
+    position: absolute;
+    right: 85px;
+    bottom: 15px;
+    
+}
+
+.back button{
+    cursor: pointer;
+    background-color: transparent;
+    color: #FF0198;
+    border: 1px solid #FF0198;
+    border-radius: 5px;
+  }
+  .back button:hover{
+    background-color: lightgrey;
+    color: black;
+    border: 1px solid black;
+    transition: all 0.6s;
+  }
 
 .flip-container .front {
     transform: rotateY(0deg);
