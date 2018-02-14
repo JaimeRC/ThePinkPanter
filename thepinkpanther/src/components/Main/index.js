@@ -37,7 +37,7 @@ class Main extends Component {
                 itemActiveSeries={this.state.itemActiveSeries} 
                 showItem={this.showItem}/>)} />
                 {/* <Route exact path="/Films" component={Films} />
-            <Route path="/TV" component={TV} /> */}
+                <Route path="/TV" component={TV} />  */}
 
             </div>)
     }

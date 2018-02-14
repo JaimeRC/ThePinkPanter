@@ -10,9 +10,11 @@ function Carousel(props) {
                     <div className="carousel-item active">
                         <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt={(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name} />
                         <div className="carousel-caption d-none d-md-block">
+                       
                             <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); props.onShowItem(type, props.itemActiveFilms.id) }}>
                                 <h6>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</h6>
                             </button>
+                        
                         </div>
                     </div>
 
