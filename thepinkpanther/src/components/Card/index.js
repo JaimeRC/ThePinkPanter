@@ -15,8 +15,8 @@ function Card(props) {
         </div>
         <div className="back">
             <h3><strong>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</strong></h3>
-              
-                <p> {props.itemActiveFilms.overview}</p>
+                <p> {props.itemActiveFilms.overview.substring(0,300).concat("...")}</p>
+           
         </div>
     </div>)
 }

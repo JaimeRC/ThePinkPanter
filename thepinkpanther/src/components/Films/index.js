@@ -6,7 +6,7 @@ import './main.css'
 
 function Films(props) {
         return (
-            <div className="container">
+            <div id="Container-films" className="container">
                 <div className='card-deck'>
                     {props.films.map(film => {
                         return (
