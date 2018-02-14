@@ -5,20 +5,22 @@ function Carousel(props) {
     let type = props.title;
     return (
         <div>
-            <div id={type} className="carousel slide" data-ride="carousel">
+            <div id={type} id="carousel1" className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt={(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name} />
                         <div className="carousel-caption d-none d-md-block">
+                       
                             <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); props.onShowItem(type, props.itemActiveFilms.id) }}>
                                 <h6>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</h6>
                             </button>
+                        
                         </div>
                     </div>
 
                     {props.films.map(film => {
                         return (
-                            <div className="carousel-item">
+                            <div id="carousel2" className="carousel-item">
                                 <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${film.backdrop_path}`} alt={(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name} />
                                 <div className="carousel-caption d-none d-md-block">
                                     <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); props.onShowItem(type, film.id) }}>

@@ -5,9 +5,10 @@ import logoSky from './logo_skylab.png'
 
 function Footer(props) {
     return (
+        
         <div className="footer">
             <div className="row">
-                <div className="col-sm-8">
+                <div className="col-sm-10">
                     <label>Contributors</label>
                     <ul>
                         <li>Carlos Ramos</li>
@@ -15,7 +16,7 @@ function Footer(props) {
                         <li>Jaime Rubio</li>
                     </ul>
                 </div>
-                <div className="col-sm-4">
+                <div className="col-sm-2">
                         <img className="imgFooter" src={logo} />
                         <img className="imgSkyFooter" src={logoSky} />
                 </div>

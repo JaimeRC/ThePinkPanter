@@ -1,7 +1,9 @@
 .footer{
+    width: 98%;
     height: 100px;
     background-color: #424247;
-    color:white
+    color:white;
+    
 }
 
 .imgFooter{
@@ -18,9 +20,25 @@
     margin-top: 10px
 }
 
-.col-sm-4{
-    display: line-block;
+.row {
+     margin-left: 20px;
+    }
+    
+.col-sm-2{
+    display: inline-block;
+    margin: 0 auto;
 }
-.col-sm-8{
+.col-sm-10{
     font-size: 12px;
+    
+   
+}
+
+label {
+    margin-top: 20px;
+    line-height: 1.6px;
+}
+
+ul{
+    list-style: none;
 }

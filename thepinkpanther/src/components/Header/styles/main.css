@@ -1,4 +1,5 @@
-#searchBar {
+
+/* #searchBar {
  background: gray;  
  position: relative;
  top: 70px; 
@@ -24,6 +25,6 @@ main .open {
 
 #searchBar .open {
     transform: translateY(100%);
-}
+} */
 
 

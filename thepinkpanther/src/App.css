@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+
+.App {
+ background-color: #424247; 
+  font-family: 'Roboto', sans-serif;
+}
 
 .btn-outline-success{
   color:#FF0198 !important;
