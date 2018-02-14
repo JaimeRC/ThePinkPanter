@@ -1,4 +1,8 @@
 
+.App {
+  background-color: #424247;
+}
+
 .btn-outline-success{
   color:#FF0198 !important;
   border-color: #FF0198 !important;
