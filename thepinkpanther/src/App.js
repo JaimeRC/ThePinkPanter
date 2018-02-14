@@ -5,17 +5,17 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 import { HashRouter } from 'react-router-dom'
 
-
 class App extends Component {
 
   render() {
-    return (<HashRouter>
-      <div className="App">
-        <Header />
-        <Main />
-        {<Footer />}
-      </div>
-    </HashRouter>
+    return (
+      <HashRouter>
+        <div className="App">
+          <Header />
+          <Main />
+          <Footer />
+        </div>
+      </HashRouter>
     );
   }
 }
