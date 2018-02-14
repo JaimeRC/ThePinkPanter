@@ -6,7 +6,7 @@ import pinkPanterApi from '../../pinkPanterApi';
 function Card(props) {
     return (<div className="flip-container">
         <div className="front">
-            <img src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt="" />
+            <img src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.poster_path}`} alt="" />
             <div className="footer">
                 <p><strong>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</strong><br />
                     Film category
