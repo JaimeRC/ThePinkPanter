@@ -7,7 +7,6 @@ import logo from './logo.png';
 
 
 function Home(props) {
-    console.log(props.films)
     return (
         <main>
             <section>
@@ -17,7 +16,7 @@ function Home(props) {
                 <Carousel
                     films={props.films}
                     itemActiveFilms={props.itemActiveFilms}
-                    onShowItem={props.showItem}
+                    onShowItem={props.onShowItem}
                     title={"movie"}
                 />
             </section>
@@ -37,7 +36,7 @@ function Home(props) {
                     films={props.series}
                     itemActiveFilms={props.itemActiveSeries}
                     title={"tv"}
-                    onShowItem={props.showItem}
+                    onShowItem={props.onShowItem}
                 />
             </section>
         </main>

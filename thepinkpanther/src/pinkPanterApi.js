@@ -24,9 +24,19 @@ let pinkPanterApi;
 
         getSearch: function (query) {
             let path = baseUrl + 'search/multi' + token + '&language=es' + '&query=' + query
-            console.log(path)
+            return this.call(path).then(res => res)
+        },
+
+        getCast: function (type, id) {
+            let path = baseUrl + type + '/' + id + 'credits' + token
+            return this.call(path).then(res => res)
+        },
+
+        getVideos: function (type, id) {
+            let path = baseUrl + type + '/' + id + 'videos' + token
             return this.call(path).then(res => res)
         }
+
     }
 })()
 
