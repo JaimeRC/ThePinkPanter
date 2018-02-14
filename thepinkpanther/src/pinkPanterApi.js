@@ -22,10 +22,10 @@ let pinkPanterApi;
             return this.call(path).then(res => res)
         },
 
-        getSearch: function (query) {
-            let path = baseUrl + 'search/multi' + token + '&language=es' + '&query=' + query
+        getSearch: function (query,page) {
+            let path = baseUrl + 'search/multi' + token + '&language=es' + '&query=' + query + '&page=' + page + '&include_adult=true'
             console.log(path)
-            return this.call(path).then(res => res)
+            return this.call(path).then(res => res.results)
         }
     }
 })()
