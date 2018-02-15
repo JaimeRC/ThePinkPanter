@@ -69,31 +69,6 @@ class Main extends Component {
 
                 <Route exact path='/Films' render={() => (
                     <div>
-<<<<<<< HEAD
-                        <Items
-                            items={this.state.films}
-                            type={'movie'}
-                        />
-                        <Pagination
-                            activePage={this.state.activePageMovie}
-                            itemsCountPerPage={10}
-                            totalItemsCount={200}
-                            onChange={this.handlePageChangeMovies}
-                        /></div>)} />
-
-                <Route exact path='/TV' render={() => (
-                    <div>
-                        <Items
-                            items={this.state.series}
-                            type={'tv'}
-                        />
-                        <Pagination
-                            activePage={this.state.activePageTv}
-                            itemsCountPerPage={10}
-                            totalItemsCount={200}
-                            onChange={this.handlePageChangeTv}
-                        /></div>)} />
-=======
                     <Items
                         items={this.state.films}
                         type={'movie'}
@@ -118,7 +93,6 @@ class Main extends Component {
                         totalItemsCount={1000}
                         onChange={this.handlePageChangeTv}
                     /></div>)} />
->>>>>>> develop
 
                 <Route path="/search/:query" component={Results} />
 
