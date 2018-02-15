@@ -39,7 +39,7 @@ class Main extends Component {
 
                 <Route exact path='/Films' render={() => (
                     <Items
-                        items={this.state.films} 
+                        items={this.state.films}
                         type={'movie'}
                     />)} />
 

@@ -18,7 +18,7 @@ let pinkPanterApi;
         },
 
         getDetaillsIdType: function (type, id) {
-            let path = `${baseUrl}${type}/${id}${token}`
+            let path = `${baseUrl}${type}/${id}${token}&language=es`
             return this.call(path).then(res => res)
         },
 
@@ -33,7 +33,7 @@ let pinkPanterApi;
         },
 
         getVideos: function (type, id) {
-            let path = `${baseUrl}${type}/${id}/videos${token}`
+            let path = `${baseUrl}${type}/${id}/videos${token}&language=es`
             return this.call(path).then(res => res.results)
         }
 
