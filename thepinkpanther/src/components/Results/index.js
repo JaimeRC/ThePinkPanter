@@ -45,7 +45,7 @@ class Results extends React.Component {
                     <div className='card-deck'>
                         {this.state.search.map(item => {
                             return (
-                                <Card item={item} type={item.media_type}/>
+                                <Card item={item} type={item.media_type} />
                             )
                         })}
                     </div>
