@@ -1,4 +1,19 @@
+#trailer{
+    padding-top: 25px;
+}
+
+
+
+.imagetv{
+    width: 735px;
+    height: 440px;
+    position: absolute;
+    z-index: 0;
+}
+
 iframe{
-    border-bottom-left-radius: 15%;
-    border-bottom-right-radius: 15%;
+    border-radius: 20px;
+    margin-top: 40px;
+    position: absolute;
+    z-index:1;
 }

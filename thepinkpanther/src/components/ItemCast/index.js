@@ -18,7 +18,7 @@ class ItemCast extends React.Component {
 
     render() {
         return (
-            <div id="reviews" className="container">
+            <div id="reviews">
                 <div className="row">
                     <div className="col">
                         <ul>
