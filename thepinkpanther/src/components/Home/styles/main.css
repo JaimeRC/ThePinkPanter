@@ -1,9 +1,9 @@
+
 .logo{
     text-align: center;
-    height: 350px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #FF0198;
+    height: 300px;
+    padding: 30px;
+    background-color: rgb(81, 142, 255);
   }
   
   .mgt10{
@@ -14,24 +14,16 @@
     margin-right: 10px;
   }
 
-  .logo > button{
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-  }
-  .logo > button:hover{
-    color: black;
-    border: 1px solid black;
-    transition: all 0.6s;
-  }
 
   @media screen and (max-width: 400px){
     .logo{
     text-align: center;
-    height: 250px;
+    height: 150px;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #FF0198;
   }
+  main {
+  margin-top: 50px;
+}
   }

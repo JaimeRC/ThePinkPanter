@@ -22,8 +22,8 @@ let pinkPanterApi;
             return this.call(path).then(res => res)
         },
 
-        getSearch: function (query) {
-            let path = `${baseUrl}search/multi${token}&language=es&query=${query}`
+        getSearch: function (query,page) {
+            let path = `${baseUrl}search/multi${token}&language=es&page=${page}&query=${query}`
             return this.call(path).then(res => res.results)
         },
 

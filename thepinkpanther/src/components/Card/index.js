@@ -20,6 +20,7 @@ render() {
         <div className="front">
             <img src={(this.props.item.poster_path) ? `http://image.tmdb.org/t/p/w500/${this.props.item.poster_path}` : no_image} alt={this.props.item.id} />
             
+            
         </div>
         <div className="back">
             <h3><strong>{(this.props.item.title) ? this.props.item.title : this.props.item.name}</strong></h3>
