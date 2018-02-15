@@ -9,7 +9,9 @@ let pinkPanterApi;
     pinkPanterApi = {
 
         call: function (url) {
-            return fetch(url).then(res => res.json())
+            return fetch(url)
+                .then(res => res.json())
+                .catch(err => console.error(err))
         },
 
         getTypePopular: function (type, page) {
@@ -22,7 +24,7 @@ let pinkPanterApi;
             return this.call(path).then(res => res)
         },
 
-        getSearch: function (query,page) {
+        getSearch: function (query, page) {
             let path = `${baseUrl}search/multi${token}&language=${"es"}&page=${page}&query=${query}`
             return this.call(path).then(res => res.results)
         },

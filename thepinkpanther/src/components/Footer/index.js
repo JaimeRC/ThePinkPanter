@@ -1,7 +1,5 @@
 import React from 'react'
 import './styles/main.css'
-import logo from './images/logo_footer.png'
-import logoSky from './images/logo_skylab.png'
 
 function Footer(props) {
     return (

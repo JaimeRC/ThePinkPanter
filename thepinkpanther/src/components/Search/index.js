@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { withRouter } from 'react-router-dom'
-import './main.css'
+import './styles/main.css'
 
 class Search extends Component {
     constructor() {
@@ -8,6 +8,10 @@ class Search extends Component {
         this.state = {
             query: ''
         }
+    }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
     }
 
     keepInput = (e) => this.setState({ query: e.target.value })

@@ -5,7 +5,6 @@ import Jumbotron from '../Jumbotron'
 import ItemResume from '../ItemResume'
 import ItemCast from '../ItemCast'
 import ItemTrailer from '../ItemTrailer'
-import Card from '../Card'
 
 class DetailsItem extends Component {
     constructor() {
@@ -14,6 +13,9 @@ class DetailsItem extends Component {
             item: {}
         }
     }
+
+    
+
 
     componentWillMount() {
         pinkPanterApi.getDetaillsIdType(this.props.match.params.type, this.props.match.params.id)

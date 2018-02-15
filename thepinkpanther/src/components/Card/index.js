@@ -11,7 +11,11 @@ class Card extends React.Component {
         }
     }
 
-    idItem = (type,id) => {
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
+    idItem = (type, id) => {
         this.props.history.push(`/details/${type}/${id}`)
     }
 

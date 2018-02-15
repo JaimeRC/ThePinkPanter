@@ -21,6 +21,10 @@ class Main extends Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     loadMovies(type, page) {
         pinkPanterApi.getTypePopular(type, page)
             .then(films => this.setState({ itemActiveFilms: films.shift(), films }))

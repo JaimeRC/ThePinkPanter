@@ -18,7 +18,7 @@ class Results extends React.Component {
     }
 
     componentWillMount() {
-        this.setState(prevState => { activePage: 1 })
+        this.setState({ activePage: 1 })
         this.loadSearch(this.props.match.params.query, this.state.activePage)
     }
 
@@ -40,7 +40,7 @@ class Results extends React.Component {
                     <div className='card-deck'>
                         {this.state.search.map(item => {
                             return (
-                                <Card item={item} type={item.media_type}/>
+                                <Card item={item} type={item.media_type} key={item.name}/>
                             )
                         })}
                     </div>

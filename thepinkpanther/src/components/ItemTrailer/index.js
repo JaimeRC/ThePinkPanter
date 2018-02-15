@@ -19,9 +19,9 @@ class ItemTrailer extends React.Component {
     render() {
         return (
             <div id="trailer" className="d-flex justify-content-center">
-                <img className="imagetv" src={tv_image}></img>
-                <iframe id="ytplayer" type="text/html" width={640} height={360}  frameBorder={0} 
-                src={(this.state.video.length > 0) ? `http://www.youtube.com/embed/${this.state.video[0].key}` : undefined}/>
+                <img className="imagetv" src={tv_image} alt="marco television" />
+                <iframe id="ytplayer" type="text/html" width={640} height={360} frameBorder={0} title="video youtube"
+                    src={(this.state.video.length > 0) ? `http://www.youtube.com/embed/${this.state.video[0].key}` : undefined} />
             </div>
         )
     }
