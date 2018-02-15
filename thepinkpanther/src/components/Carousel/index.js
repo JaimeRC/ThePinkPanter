@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './styles/main.css'
 import withRouter from 'react-router-dom/withRouter';
 
-class Carousel extends React.Component {
+class Carousel extends Component {
     constructor() {
         super()
         this.state = {

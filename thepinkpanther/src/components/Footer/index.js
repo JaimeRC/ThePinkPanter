@@ -9,10 +9,10 @@ function Footer(props) {
         <div className="footer">
             <div className="row">
                 <div className="col-sm-10">
-                    <label>Contributors</label>
+                    <label>Contributors:</label>
                     <ul>
-                        <li>Carlos Ramos</li>
-                        <li>Alex Gonzalez</li>
+                        <li>Carlos Ramos</li><br/>
+                        <li>Alex Gonzalez</li><br/>
                         <li>Jaime Rubio</li>
                     </ul>
                 </div>

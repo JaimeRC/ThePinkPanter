@@ -1,6 +1,5 @@
 .footer{
     width: 98%;
-    margin-top: 20px;
     height: 100px;
     background-color: #646464;
     color:white;
@@ -18,7 +17,7 @@
     width: 60px;
     height: 60px;
     padding-top: 10px;
-    margin-top: 10px
+    margin-top: 5px
 }
 
 .row {
@@ -28,9 +27,11 @@
 .col-sm-2{
     display: inline-block;
     margin: 0 auto;
+    height: 60px;
 }
 .col-sm-10{
     font-size: 12px;
+    height: 60px;
     
    
 }
@@ -42,4 +43,34 @@ label {
 
 ul{
     list-style: none;
+}
+
+@media screen and (max-width: 400px){
+    .footer{
+    width: 98%;
+    height: 70px;
+    background-color: #646464;
+    color:white;
+    }
+    .imgFooter{
+    width: 80px;
+    height: 50px ;
+    /* padding-top: 10px;
+    margin-top: 10px */
+}
+
+.imgSkyFooter{
+    width: 30px;
+    height: 40px;
+    /* padding-top: 10px;
+    margin-top: 5px */
+}
+
+.col-sm-10{
+    display: none;
+}
+.row {
+    
+     margin: auto 120px 10px;
+    }
 }
