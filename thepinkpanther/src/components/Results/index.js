@@ -17,14 +17,14 @@ class Results extends React.Component {
             .then(search => this.setState({ search }))
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.setState(prevState => { activePage: 1 })
-        this.loadSearch(this.props.match.params.query, this.state.activePage)
+        this.loadSearch(this.props.match.params.query, 1)
     }
 
     componentWillReceiveProps(props) {
         this.setState({ activePage: 1 })
-        this.loadSearch(props.match.params.query, this.state.activePage)
+        this.loadSearch(props.match.params.query, 1)
     }
 
     handlePageChange = (pageNumber) => {
