@@ -19,17 +19,17 @@ class Results extends React.Component {
 
     componentWillMount() {
         this.setState(prevState => { activePage: 1 })
-        this.loadSearch(this.props.match.params.query, this.state.activePage)
+        this.loadSearch(this.props.match.params.query, 1)
     }
 
     componentWillReceiveProps(props) {
         this.setState({ activePage: 1 })
-        this.loadSearch(props.match.params.query, this.state.activePage)
+        this.loadSearch(props.match.params.query, 1)
     }
 
     handlePageChange = (pageNumber) => {
         this.setState({ activePage: pageNumber })
-        this.loadSearch(this.props.match.params.query, this.state.activePage)
+        this.loadSearch(this.props.match.params.query, pageNumber)
     }
 
     render() {
@@ -50,7 +50,7 @@ class Results extends React.Component {
                     <Pagination
                         activePage={this.state.activePage}
                         itemsCountPerPage={10}
-                        totalItemsCount={450}
+                        totalItemsCount={200}
                         onChange={this.handlePageChange}
                     />
                 </div>
