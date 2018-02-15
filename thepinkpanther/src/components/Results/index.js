@@ -18,7 +18,7 @@ class Results extends React.Component {
     }
 
     componentWillMount() {
-        this.setState(prevState => { activePage: 1 })
+        this.setState({ activePage: 1 })
         this.loadSearch(this.props.match.params.query, this.state.activePage)
     }
 
