@@ -38,12 +38,7 @@ class Main extends Component {
         this.loadTv('tv',1)
     }
 
-    componentWillReceiveProps(props) {
-        this.setState({ activePageMovie: 1 })
-        this.setState({ activePageTv: 1 })
-        this.loadMovies('movie',1)
-        this.loadTv('tv',1)
-    }
+
 
     handlePageChangeMovies = (pageNumber) => {
         this.setState({ activePageMovie: pageNumber })
