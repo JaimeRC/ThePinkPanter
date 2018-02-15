@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi.js';
+import no_image from './images/no_image.png'
 
 class ItemCast extends React.Component {
     constructor() {
@@ -21,7 +22,7 @@ class ItemCast extends React.Component {
                 <ul>
                     {this.state.cast.map(actor => {
                         return (
-                            <li key={actor.id}><img className="cast" src={`http://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt={actor.name} />{actor.name}</li>
+                            <li key={actor.id}><img className="cast" src={(actor.profile_path) ? `http://image.tmdb.org/t/p/w500/${actor.profile_path}` : no_image} alt={actor.name} />{actor.name}</li>
                         )
                     })}
                 </ul>
