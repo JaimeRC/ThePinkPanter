@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi';
 import Jumbotron from '../Jumbotron'

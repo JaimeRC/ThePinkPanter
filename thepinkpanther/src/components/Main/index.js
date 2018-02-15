@@ -14,8 +14,7 @@ class Main extends Component {
             itemActiveFilms: [],
             series: [],
             itemActiveSeries: [],
-            item: {},
-            type: ""
+            item: {}
         }
     }
 
@@ -41,11 +40,13 @@ class Main extends Component {
                 <Route exact path='/Films' render={() => (
                     <Items
                         items={this.state.films}
+                        type={'movie'}
                     />)} />
 
                 <Route exact path='/TV' render={() => (
                     <Items
                         items={this.state.series}
+                        type={'tv'}
                     />)} />
 
                 <Route path="/search/:query" component={Results} />

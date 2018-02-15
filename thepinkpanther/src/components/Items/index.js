@@ -8,7 +8,7 @@ function Items(props) {
             <div className='card-deck'>
                 {props.items.map(item => {
                     return (
-                        <Card item={item} key={item.id} />
+                        <Card item={item} key={item.id} type={props.type}/>
                     )
                 })}
             </div>
