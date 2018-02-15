@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import pinkPanterApi from '../../pinkPanterApi.js';
 import Home from '../Home';
@@ -76,7 +76,7 @@ class Main extends Component {
                     <Pagination
                         activePage={this.state.activePageMovie}
                         itemsCountPerPage={10}
-                        totalItemsCount={200}
+                        totalItemsCount={1000}
                         onChange={this.handlePageChangeMovies}
                     /></div>)} />
 
@@ -87,9 +87,10 @@ class Main extends Component {
                         type={'tv'}
                     />
                     <Pagination
+                        className={'pagination'}
                         activePage={this.state.activePageTv}
                         itemsCountPerPage={10}
-                        totalItemsCount={200}
+                        totalItemsCount={1000}
                         onChange={this.handlePageChangeTv}
                     /></div>)} />
 

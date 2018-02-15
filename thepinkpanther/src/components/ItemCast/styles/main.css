@@ -6,13 +6,21 @@
     padding: 20px;
 }
 
-.cast{
-    width: 5%;
-    height: 10%;
-    border-radius: 50%;
+#reviews ul li{
+    display: inline;
+    margin: 15px;
+    
 }
 
-li{
-    display: inline;
-    margin: 20px;
+#reviews ul{
+    padding-left: none;
 }
+#reviews ul li .cast {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    background-size: 100%;
+    margin: 15px 15px;
+  }

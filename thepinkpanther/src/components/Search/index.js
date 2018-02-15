@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import './main.css'
+import './styles/main.css'
 
 class Search extends Component {
     constructor() {
@@ -8,6 +8,10 @@ class Search extends Component {
         this.state = {
             query: ''
         }
+    }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
     }
 
     keepInput = (e) => this.setState({ query: e.target.value })
@@ -20,12 +24,12 @@ class Search extends Component {
     render() {
         return <div>
             <form className="form-inline" onSubmit={e => { e.preventDefault(); this.search() }}>
-                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={this.keepInput} value={this.state.query}/>
+                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={this.keepInput} value={this.state.query} />
                 <button id="Find" className="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
         </div>
     }
-    
+
 }
 
 const SearchWithRouter = withRouter(Search)
