@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import pinkPanterApi from '../../pinkPanterApi.js';
 import Home from '../Home';
