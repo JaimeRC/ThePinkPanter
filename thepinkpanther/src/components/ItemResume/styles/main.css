@@ -5,10 +5,17 @@
 }
 
 .colum1{
-    width: 500px;
-    margin-left: 30px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
 }
+
+.colum1 img{
+    max-height: 450px;
+}
+
 .colum2 {
+    margin-top: 15px;
     width: 600px;
     color: white;
     text-align: justify;

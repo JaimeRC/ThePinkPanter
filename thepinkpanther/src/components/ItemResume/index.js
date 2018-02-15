@@ -4,10 +4,10 @@ import './styles/main.css'
 function ItemResume(props) {
     return (
         <div id="info" className="resume">
-            <div className="colum1">
+            <div className="colum1 col-md-5">
                 <img className="img-thumbnail" src={`http://image.tmdb.org/t/p/w500/${props.item.poster_path}`} alt={props.item.id} />
             </div>
-            <div className="colum2">
+            <div className="colum2 col-md-6">
                 <h1>{(props.item.tagline) ? props.item.tagline : null}</h1>
                 <br />
                 <br />
