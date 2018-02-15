@@ -1,11 +1,15 @@
 #reviews{
     color: white;
-    height: 380px;
+    height: 430px;
     width: auto;
-    background-color: #FF0198 !important;
+    background-color: rgba(255, 1, 152, 0.3) !important;
     overflow: hidden;
     padding: 20px;
     margin-top: 20px;
+}
+
+h2 {
+    margin-left: 20px;
 }
 
 h5{
@@ -28,17 +32,19 @@ li{
   flex-flow: row wrap; 
   display: -webkit-box;
   display: flex;
+  justify-content: space-around;
+  
 }
 .cast div { 
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  flex: auto; 
+  
   width: 200px; 
-  margin: .5vw; 
+  margin: .5vw;
+  
+  
 }
 .cast div img { 
   width: 100%; 
-  height: auto; 
+  max-height: 300px; 
 }
 @media screen and (max-width: 400px) {
   .cast div { margin: 0; }

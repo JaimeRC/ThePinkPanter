@@ -21,7 +21,9 @@ class ItemCast extends React.Component {
             <div id="reviews">
                 <div className="row">
                     <div className="col-md-12">
+                    <h2>CAST</h2>
                         <header className='cast'>
+                        
                             {this.state.cast.map(actor => {
                                 return (
                                     <div>
