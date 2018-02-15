@@ -1,0 +1,31 @@
+.Series {
+    height: 50px;
+}
+
+#Jumbotron {
+  width: 100%;
+}
+
+.jumbotron-fluid{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  /* height: 140px; */
+
+}
+
+
+@media screen and (max-width: 480px){
+  .jumbotron-fluid{
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 10px;
+
+}
+  .Jumbotron {
+
+  padding: 0!important;
+  }
+.Series {
+    height: 10px;
+}
+}

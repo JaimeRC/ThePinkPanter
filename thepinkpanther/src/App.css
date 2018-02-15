@@ -6,12 +6,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.jumbotron-fluid{
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  height: 140px;
 
-}
 
 .carousel-inner img {
   width: 100%;
@@ -76,8 +71,4 @@
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.6), inset 0 1px rgba(255, 255, 255, 0.1);
   color: #ebebeb;
   text-shadow: none;
-}
-
-.pagination {
-  margin-top: 200px;
 }

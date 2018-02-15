@@ -18,7 +18,7 @@ function Home(props) {
                 />
             </section>
 
-            <section className="logo">
+            <section className="logo hidden-xs-down" >
                 <img src={logo} className="img-fluid" alt="logo" width='30%' />
                 <p className="mgt10">Más de 10.000 titulos disponibles para nuestros clientes</p>
                 
@@ -26,7 +26,7 @@ function Home(props) {
 
             <section>
                 <header>
-                    <Jumbotron title={"Series"} />
+                    <Jumbotron className={"Series"} title={"Series"} />
                 </header>
                 <Carousel
                     items={props.series}

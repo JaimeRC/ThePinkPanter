@@ -1,12 +1,13 @@
 
+
+
 .App-header {
-    top: 1px;
-    height: 10px;
+    top: 0;
+    height: 40px;
+    
 }
 
-#header {
-    height: 50px;
-} 
+
 
 .btn-outline-success{
   color:#FF0198 !important;
@@ -20,21 +21,35 @@
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 780px){
    
     #Find {
         display:none;
     }
 
     .App-header {
-    height: auto;
+    height: 10px;
     
-}
-
-#header {
-    height: auto;
 } 
 }
+
+@media screen and (max-width: 1200px){
+   
+    #Find {
+        display:none;
+    }
+
+    .App-header {
+    height: 10px;
+    
+} 
+#header {
+    height: 10px;
+} 
+}
+
+
+
 
 
 
