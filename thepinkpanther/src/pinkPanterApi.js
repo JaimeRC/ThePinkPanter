@@ -18,12 +18,12 @@ let pinkPanterApi;
         },
 
         getDetaillsIdType: function (type, id) {
-            let path = `${baseUrl}${type}/${id}${token}&language=es`
+            let path = `${baseUrl}${type}/${id}${token}`
             return this.call(path).then(res => res)
         },
 
-        getSearch: function (query,page) {
-            let path = `${baseUrl}search/multi${token}&language=es&page=${page}&query=${query}`
+        getSearch: function (query) {
+            let path = `${baseUrl}search/multi${token}&language=es&query=${query}`
             return this.call(path).then(res => res.results)
         },
 
@@ -33,8 +33,8 @@ let pinkPanterApi;
         },
 
         getVideos: function (type, id) {
-            let path = `${baseUrl}${type}/${id}/videos${token}&language=es`
-            return this.call(path).then(res => res.results)
+            let path = `${baseUrl}${type}/${id}/videos${token}`
+            return this.call(path).then(res => res.results[0].key)
         }
 
     }
