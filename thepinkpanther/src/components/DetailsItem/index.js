@@ -6,6 +6,11 @@ import ItemResume from '../ItemResume'
 import ItemCast from '../ItemCast'
 import ItemTrailer from '../ItemTrailer'
 
+/**
+ * @param {class} DetailsItem - show only one tv or movie details
+ * @param {array} item - movie or tv detail 
+ */
+
 class DetailsItem extends React.Component {
     constructor() {
         super()

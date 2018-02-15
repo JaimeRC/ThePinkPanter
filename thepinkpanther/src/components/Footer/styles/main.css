@@ -9,17 +9,43 @@ footer{
 footer .container {
     margin-top: 20px;
     margin-left: 400px;
+    margin-bottom: 0;
 }
-footer>ul{
-    
+footer> .container > ul{
+    margin-bottom: 0 ;
     list-style: none;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 850px){
     footer{
     width: 98%;
     height: 30px;
     background-color: #646464;
+    
+    color:white;
+    }
+    footer .container {
+    margin-top: 20px;
+    margin-left: 100px;
+    line-height: 2px;
+    font-size: 10px;
+    
+}
+footer label{
+    display: none;
+}
+footer> .container > ul{
+    font-size: 16px;
+    list-style: none;
+}
+} 
+
+@media screen and (max-width: 470px){
+    footer{
+    width: 98%;
+    height: 30px;
+    background-color: #646464;
+    
     color:white;
     }
     footer .container {
@@ -27,9 +53,13 @@ footer>ul{
     margin-left: -10px;
     line-height: 2px;
     font-size: 10px;
+    
 }
 footer label{
     display: none;
-
+}
+footer> .container > ul{
+    font-size: 10px;
+    list-style: none;
 }
 } 

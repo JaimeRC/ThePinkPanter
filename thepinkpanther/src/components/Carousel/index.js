@@ -2,6 +2,15 @@ import React from 'react'
 import './styles/main.css'
 import withRouter from 'react-router-dom/withRouter';
 
+/**
+ * @param {class} Carousel - show carousel images popular tvs and movies
+ * @param {object} itemActive - show active the first image on carousel 
+ * @param {array} item - array populars tvs or movies
+ * @param {function} idItem - create dinamic url
+ * @param {string} type - type (movie o tv)
+ * @param {integer} id - id movie or tv 
+ */
+
 class Carousel extends React.Component {
     constructor() {
         super()
