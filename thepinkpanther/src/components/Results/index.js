@@ -29,7 +29,7 @@ class Results extends React.Component {
 
     handlePageChange = (pageNumber) => {
         this.setState({ activePage: pageNumber })
-        this.loadSearch(this.props.match.params.query, this.state.activePage)
+        this.loadSearch(this.props.match.params.query, pageNumber)
     }
 
     render() {
@@ -40,7 +40,7 @@ class Results extends React.Component {
                     <div className='card-deck'>
                         {this.state.search.map(item => {
                             return (
-                                <Card item={item} type={item.media_type}/>
+                                <Card item={item} type={item.media_type} />
                             )
                         })}
                     </div>

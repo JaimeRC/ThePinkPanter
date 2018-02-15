@@ -1,11 +1,10 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi';
 import Jumbotron from '../Jumbotron'
 import ItemResume from '../ItemResume'
 import ItemCast from '../ItemCast'
 import ItemTrailer from '../ItemTrailer'
-import Card from '../Card'
 
 class DetailsItem extends React.Component {
     constructor() {
@@ -13,6 +12,10 @@ class DetailsItem extends React.Component {
         this.state = {
             item: {}
         }
+    }
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
     }
 
     componentWillMount() {
