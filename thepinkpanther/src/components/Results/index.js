@@ -18,18 +18,18 @@ class Results extends React.Component {
     }
 
     componentWillMount() {
-        this.setState({ activePage: 1 })
+        this.setState(prevState => { activePage: 1 })
         this.loadSearch(this.props.match.params.query, this.state.activePage)
     }
 
     componentWillReceiveProps(props) {
         this.setState({ activePage: 1 })
-        this.loadSearch(props.match.params.query, 1)
+        this.loadSearch(props.match.params.query, this.state.activePage)
     }
 
     handlePageChange = (pageNumber) => {
         this.setState({ activePage: pageNumber })
-        this.loadSearch(this.props.match.params.query, pageNumber)
+        this.loadSearch(this.props.match.params.query, this.state.activePage)
     }
 
     render() {
@@ -40,7 +40,7 @@ class Results extends React.Component {
                     <div className='card-deck'>
                         {this.state.search.map(item => {
                             return (
-                                <Card item={item} type={item.media_type} />
+                                <Card item={item} type={item.media_type}/>
                             )
                         })}
                     </div>
@@ -50,7 +50,7 @@ class Results extends React.Component {
                     <Pagination
                         activePage={this.state.activePage}
                         itemsCountPerPage={10}
-                        totalItemsCount={200}
+                        totalItemsCount={450}
                         onChange={this.handlePageChange}
                     />
                 </div>
