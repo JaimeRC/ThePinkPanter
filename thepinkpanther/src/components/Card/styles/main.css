@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100, 400');
 
 
-/* .card-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row;
-    flex-wrap: wrap;
-} */
 
 .flip-container {
     margin: 20px;
@@ -75,7 +68,7 @@ h3 {
     position: absolute;
     overflow: hidden;
     top: 0;
-    color: #FF0198;
+    color: rgb(80, 80, 245);
     line-height: 20px;
     width: 100%;
     height: 340px;
@@ -96,7 +89,7 @@ h3 {
     padding: 20px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    color: #FF0198;
+    color: white;
 }
 
 .back button {
@@ -158,5 +151,20 @@ h3 {
     transform-style: preserve-3d;
 }
 
+@media screen and (max-width: 400px){
+    
+    .flip-container {
 
+        margin: 20px auto;
+        width:300px ;
+        height: 400px;
+    }
+    .front img {
+        width: 100%;
+        max-height: 400px;
+    }
 
+    .back {
+        height: 400px;
+    }
+}

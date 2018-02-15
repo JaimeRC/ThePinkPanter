@@ -21,8 +21,7 @@ function Home(props) {
             <section className="logo">
                 <img src={logo} className="img-fluid" alt="logo" width='30%' />
                 <p className="mgt10">Más de 10.000 titulos disponibles para nuestros clientes</p>
-                <button className="btn my-2 my-sm-0 mrr10">Peliculas</button>
-                <button className="btn my-2 my-sm-0">Series</button>
+                
             </section>
 
             <section>
