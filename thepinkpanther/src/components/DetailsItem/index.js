@@ -7,6 +7,11 @@ import ItemCast from '../ItemCast'
 import ItemTrailer from '../ItemTrailer'
 import Card from '../Card'
 
+/**
+ * @param {class} DetailsItem - show only one tv or movie details
+ * @param {array} item - movie or tv detail 
+ */
+
 class DetailsItem extends Component {
     constructor() {
         super()
