@@ -2,17 +2,31 @@ import React from 'react';
 import './styles/main.css';
 import no_image from './images/no_image.jpg'
 
+class Card extends Component {
+    constructor() {
+        super()
+        this.state = {
+            id: ""
+        }
+    }
 
-function Card(props) {
+    idItem = (id) => {
+        this.props.history.push(`/details/${id}`)
+    }
+
+render() {
     return (<div className="flip-container">
         <div className="front">
-            <img src={(props.item.poster_path) ? `http://image.tmdb.org/t/p/w500/${props.item.poster_path}` : no_image} alt={(props.item.title) ? props.item.title : props.item.name} />
+            <img src={`http://image.tmdb.org/t/p/w500/${this.props.itemActiveFilms.poster_path}`} alt="" />
+            
         </div>
         <div className="back">
-            <h3><strong>{(props.item.title) ? props.item.title : props.item.name}</strong></h3>
-            <p> {(props.item.overview) ? props.item.overview.substring(0, 300).concat("...") : undefined}</p>
+            <h3><strong>{(this.props.itemActiveFilms.title) ? this.props.itemActiveFilms.title : this.props.itemActiveFilms.name}</strong></h3>
+                <p> {this.props.itemActiveFilms.overview.substring(0,200).concat("...")}</p>
+            <button class="btn my-2 my-sm-0" onClick={(e) => { e.preventDefault(); this.idItem() }}>Info</button>
         </div>
     </div>)
 }
+}
 
-export default Card
+export default withRouter(Card)

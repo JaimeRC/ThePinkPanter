@@ -1,4 +1,12 @@
 
+.App-header {
+    height: 30px;
+}
+
+#header {
+    height: 80px;
+} 
+
 .btn-outline-success{
   color:#FF0198 !important;
   border-color: #FF0198 !important;
@@ -11,32 +19,19 @@
 }
 
 
-/* #searchBar {
- background: gray;  
- position: relative;
- top: 70px; 
-
+@media screen and (max-width: 400px){
+    .App-header {
+        background-color: black;
+    height: 30px;
 }
 
-main {
-    transform: translateY(0);
-    transition: all .6s ease;
+#header {
+    
+    height: 60px;
+} 
+#navbarCollapse{
+    width: 300px;
+   background-color: black; 
 }
-
-main .open {
-    transform: translateY(5%);
-}
-
-#searchBar {
-    top: 0;
-    left: 0;
-    position: relative;
-    transform: translateY(-100%);
-    transition: all .6s ease;
-}
-
-#searchBar .open {
-    transform: translateY(100%);
-} */
-
+  }
 
