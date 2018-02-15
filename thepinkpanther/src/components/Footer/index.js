@@ -9,9 +9,9 @@ function Footer(props) {
             <div className="container">
                         <ul>
                         <label>Contributors:</label>
-                            <li>Carlos Ramos</li>
-                            <li>Alex Gonzalez</li>
-                            <li>Jaime Rubio</li>
+                            <li><a href="https://github.com/Asix94">Carlos Ramos</a></li>
+                            <li><a href="https://github.com/AlexGonRod">Alex Gonzalez</a></li>
+                            <li><a href="https://github.com/JaimeRC">Jaime Rubio</a></li>
                         </ul>
             </div>
         </footer>
