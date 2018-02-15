@@ -1,7 +1,29 @@
+
+
+
 .carousel-inner img {
-    margin-top: 150px;
-    transform: scaleY(1.6);
+    margin-top: 100px;
+    transform: scaleY(1.5);
 
   }
+
+.btn-secondary {
+  position: relative;
+  left:-205px;
+  background-color: rgba(43, 42, 42, 0.3)!important;
+  width: 1365px;
+  height: 100px;
+  margin-bottom: -40px;
+  border: none;
+  
+}
+
+@media screen and (max-width: 400px){
+  .carousel-inner img {
+    margin-top: 55px;
+    transform: scaleY(1.5);
+
+  }
+}
   
 

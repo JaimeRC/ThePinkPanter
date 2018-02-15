@@ -213,6 +213,96 @@
             </div>
             </div>
         </section>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">{props.title}</h1>
+            </div>
+        </div>
+        <div id="info" class="container">
+            <div class="row">
+                <div class="col">
+                    <section>
+                        <img class="img-thumbnail" src="http://image.tmdb.org/t/p/w500//qey0tdcOp9kCDdEZuJ87yE3crSe.jpg">
+                    </section>
+                </div>
+                <div class="col">
+                    <aside>
+                        <h1>"Before Gru, they had a history of bad bosses" (tagline)</h1>
+                        <br>
+                        <br>
+                        <h3>
+                            "Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb,
+                            hatches a plot to take over the world." (overview)
+                        </h3>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="reviews" class="container">
+            <h2>Reviews</h3>
+                <div class="row">
+                    <div class="col">
+                        <section>
+                            <noscript>llamada Api: https://developers.themoviedb.org/3/movies/get-movie-reviews </noscript>
+                            <div class="container">
+                                <noscript>https://api.themoviedb.org/3/movie/{id_movie}/reviews?api_key=5aee70d47502de15fcdde658cbdcb3c7&language=en-US&page=1</noscript>
+                                <h4>Andres Gomez (results[0].author)</h4>
+                                <p>
+                                    The minions are a nice idea and the animation and London recreation is really good, but that's about it.\r\n\r\nThe script
+                                    is boring and the jokes not really funny. (results[0].author.content)
+                                </p>
+                                <h4>movizonline.com (results[1].author)</h4>
+                                <p>
+                                    a nice idea and the animation.the new thing in animation field.a movie that every one should like an kid or old man (results[1].author.content)
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col">
+                        <section>
+                            <table class="table table-sm table-dark">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Homepage</th>
+                                        <td>www.minions.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">release_date</th>
+                                        <td>2015-06-17</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">original_language</th>
+                                        <td>en</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">popularity</th>
+                                        <td>497.207985</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">production_companies[0].name</th>
+                                        <td>Universal Pictures</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">production_countries[0].name</th>
+                                        <td>United States of America</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+        </div>
+
+        <div id="trailer" class="d-flex justify-content-center">
+            <noscript>https://api.themoviedb.org/3/movie/{id_movie}/videos?api_key=5aee70d47502de15fcdde658cbdcb3c7&language=en-US</noscript>
+            <noscript>http://www.youtube.com/embed/{results[0].id}</noscript>
+            <iframe id="ytplayer" type="text/html" width="640" height="360" src="http://www.youtube.com/embed/jc86EFjLFV4" frameborder="0"
+            />
+        </div>
     </main>
 
 

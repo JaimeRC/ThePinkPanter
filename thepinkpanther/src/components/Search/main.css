@@ -1,0 +1,41 @@
+
+.App-header {
+    top: 1px;
+    height: 10px;
+}
+
+#header {
+    height: 50px;
+} 
+
+.btn-outline-success{
+  color:#FF0198 !important;
+  border-color: #FF0198 !important;
+}
+  
+.btn-outline-success:hover{
+  background-color: #FF0198;
+  color: gray !important;
+  border-color: gray !important;
+}
+
+
+@media screen and (max-width: 400px){
+   
+    #Find {
+        display:none;
+    }
+
+    .App-header {
+    height: auto;
+    
+}
+
+#header {
+    height: auto;
+} 
+}
+
+
+
+

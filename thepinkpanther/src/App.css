@@ -1,13 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
-.btn-outline-success{
-  color:#FF0198 !important;
-  border-color: #FF0198 !important;
-}
-  
-.btn-outline-success:hover{
-  background-color: #FF0198;
-  color: gray !important;
-  border-color: gray !important;
+
+.App {
+ background-color: #646464; 
+  font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron-fluid{

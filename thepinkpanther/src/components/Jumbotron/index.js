@@ -1,8 +1,9 @@
-import React, { Componet } from 'react'
+import React from 'react'
+import './styles/main.css'
 
 function Jumbotron(props) {
     return (
-        <div className="jumbotron jumbotron-fluid">
+        <div id="Jumbotron" className="jumbotron jumbotron-fluid">
             <div className="container">
                 <h1 className="display-4">{props.title}</h1>
             </div>

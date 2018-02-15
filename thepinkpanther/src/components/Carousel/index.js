@@ -1,46 +1,59 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './styles/main.css'
+import withRouter from 'react-router-dom/withRouter';
 
-function Carousel(props) {
-    let type = props.title;
-    return (
-        <div>
-            <div id={type} className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${props.itemActiveFilms.backdrop_path}`} alt={(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name} />
-                        <div className="carousel-caption d-none d-md-block">
-                            <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); props.onShowItem(type, props.itemActiveFilms.id) }}>
-                                <h6>{(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name}</h6>
-                            </button>
-                        </div>
-                    </div>
+class Carousel extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            id: ""
+        }
+    }
 
-                    {props.films.map(film => {
-                        return (
-                            <div className="carousel-item">
-                                <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${film.backdrop_path}`} alt={(props.itemActiveFilms.title) ? props.itemActiveFilms.title : props.itemActiveFilms.name} />
-                                <div className="carousel-caption d-none d-md-block">
-                                    <button type="button" class="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); props.onShowItem(type, film.id) }}>
-                                        <h5>{film.title ? film.title : film.name}</h5>
-                                    </button>
-                                </div>
+    idItem = (type, id) => {
+        this.props.history.push(`/details/${type}/${id}`)
+    }
+
+    render() {
+        return (
+            <div>
+                <div id={this.props.title} className="carousel slide" data-ride="carousel">
+                    <div className="carousel-inner">
+                        <div key={this.props.itemActive.id} className="carousel-item active">
+                            <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${this.props.itemActive.backdrop_path}`} alt={(this.props.itemActive.title) ? this.props.itemActive.title : this.props.itemActive.name} />
+                            <div className="carousel-caption d-none d-md-block">
+                                <button type="button" className="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); this.idItem(this.props.title, this.props.itemActive.id) }}>
+                                    <h6>{(this.props.itemActive.title) ? this.props.itemActive.title : this.props.itemActive.name}</h6>
+                                </button>
                             </div>
-                        )
-                    })}
+                        </div>
+
+                        {this.props.items.map(item => {
+                            return (
+                                <div key={item.id} className="carousel-item">
+                                    <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${item.backdrop_path}`} alt={(item.title) ? item.title : item.name} />
+                                    <div className="carousel-caption d-none d-md-block">
+                                        <button type="button" className="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); this.idItem(this.props.title, item.id) }}>
+                                            <h5>{item.title ? item.title : item.name}</h5>
+                                        </button>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <a className="carousel-control-prev" href={`#${this.props.title}`} role="button" data-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true" />
+                        <span className="sr-only">Previous</span>
+                    </a>
+                    <a className="carousel-control-next" href={`#${this.props.title}`} role="button" data-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true" />
+                        <span className="sr-only">Next</span>
+                    </a>
                 </div>
-                <a className="carousel-control-prev" href={`#${props.title}`} role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true" />
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href={`#${props.title}`} role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true" />
-                    <span className="sr-only">Next</span>
-                </a>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 
-export default Carousel
+export default withRouter(Carousel)

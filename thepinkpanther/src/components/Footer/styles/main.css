@@ -1,26 +1,35 @@
-.footer{
-    height: 100px;
-    background-color: #424247;
-    color:white
+footer{
+    width: 98%;
+    height: 40px;
+    background-color: #646464;
+    color:white;
+    
 }
 
-.imgFooter{
-    width: 130px;
-    height: 60px ;
-    padding-top: 10px;
-    margin-top: 10px
+footer .container {
+    margin-top: 20px;
+    margin-left: 400px;
+}
+footer>ul{
+    
+    list-style: none;
 }
 
-.imgSkyFooter{
-    width: 60px;
-    height: 60px;
-    padding-top: 10px;
-    margin-top: 10px
+@media screen and (max-width: 400px){
+    footer{
+    width: 98%;
+    height: 30px;
+    background-color: #646464;
+    color:white;
+    }
+    footer .container {
+    margin-top: 20px;
+    margin-left: -10px;
+    line-height: 2px;
+    font-size: 10px;
 }
+footer label{
+    display: none;
 
-.col-sm-4{
-    display: line-block;
 }
-.col-sm-8{
-    font-size: 12px;
-}
+} 
