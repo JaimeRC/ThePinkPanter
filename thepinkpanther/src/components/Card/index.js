@@ -3,20 +3,15 @@ import './styles/main.css';
 import no_image from './images/no_image.jpg'
 import withRouter from 'react-router-dom/withRouter';
 
-/**
- * @param {class} Card - show info card movies or tvs
- * @param {object} item - object tvs or movies
- * @param {function} idItem - create dinamic url
- * @param {string} type - type (movie o tv)
- * @param {integer} id - id movie or tv 
- */
-
 class Card extends React.Component {
     constructor() {
         super()
+        this.state = {
+            id: ""
+        }
     }
 
-    idItem = (type, id) => {
+    idItem = (type,id) => {
         this.props.history.push(`/details/${type}/${id}`)
     }
 

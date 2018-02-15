@@ -1,26 +1,18 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi';
 import Jumbotron from '../Jumbotron'
 import ItemResume from '../ItemResume'
 import ItemCast from '../ItemCast'
 import ItemTrailer from '../ItemTrailer'
+import Card from '../Card'
 
-/**
- * @param {class} DetailsItem - show only one tv or movie details
- * @param {array} item - movie or tv detail 
- */
-
-class DetailsItem extends React.Component {
+class DetailsItem extends Component {
     constructor() {
         super()
         this.state = {
             item: {}
         }
-    }
-
-    componentDidMount() {
-        window.scrollTo(0, 0)
     }
 
     componentWillMount() {

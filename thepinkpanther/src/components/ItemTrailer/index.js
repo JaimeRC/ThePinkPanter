@@ -7,7 +7,7 @@ class ItemTrailer extends React.Component {
     constructor() {
         super()
         this.state = {
-            video: []
+            video: ""
         }
     }
 
