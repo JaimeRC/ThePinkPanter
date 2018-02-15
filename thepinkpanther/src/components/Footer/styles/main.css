@@ -6,6 +6,14 @@ footer{
     
 }
 
+.colaborators{
+    color: black;
+}
+
+.colaborators:hover{
+    color: white;
+}
+
 footer .container {
     margin-top: 20px;
     margin-left: 400px;
