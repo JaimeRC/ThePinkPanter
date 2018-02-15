@@ -18,10 +18,18 @@
   
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 750px){
   .carousel-inner img {
-    margin-top: 55px;
-    transform: scaleY(1.5);
+    margin-top: 0px;
+    transform: scaleY(1);
+
+  }
+}
+
+@media screen and (max-width: 470px){
+  .carousel-inner img {
+    margin-top: 0px;
+    transform: scaleY(1);
 
   }
 }
