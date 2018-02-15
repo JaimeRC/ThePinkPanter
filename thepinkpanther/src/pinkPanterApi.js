@@ -34,7 +34,7 @@ let pinkPanterApi;
 
         getVideos: function (type, id) {
             let path = `${baseUrl}${type}/${id}/videos${token}`
-            return this.call(path).then(res => res.results[0].key)
+            return this.call(path).then(res => res.results)
         }
 
     }

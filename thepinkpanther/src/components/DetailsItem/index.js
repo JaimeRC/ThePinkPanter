@@ -7,7 +7,7 @@ import ItemCast from '../ItemCast'
 import ItemTrailer from '../ItemTrailer'
 import Card from '../Card'
 
-class DetailsItem extends Component {
+class DetailsItem extends React.Component {
     constructor() {
         super()
         this.state = {
