@@ -13,17 +13,17 @@ let pinkPanterApi;
         },
 
         getTypePopular: function (type, page) {
-            let path = `${baseUrl}${type}/popular${token}&language=es&page=${page}`
+            let path = `${baseUrl}${type}/popular${token}&language=${"es"}&page=${page}`
             return this.call(path).then(res => res.results)
         },
 
         getDetaillsIdType: function (type, id) {
-            let path = `${baseUrl}${type}/${id}${token}&language=es`
+            let path = `${baseUrl}${type}/${id}${token}&language=${"es"}`
             return this.call(path).then(res => res)
         },
 
         getSearch: function (query,page) {
-            let path = `${baseUrl}search/multi${token}&language=es&page=${page}&query=${query}`
+            let path = `${baseUrl}search/multi${token}&language=${"es"}&page=${page}&query=${query}`
             return this.call(path).then(res => res.results)
         },
 
@@ -33,7 +33,7 @@ let pinkPanterApi;
         },
 
         getVideos: function (type, id) {
-            let path = `${baseUrl}${type}/${id}/videos${token}&language=es`
+            let path = `${baseUrl}${type}/${id}/videos${token}&language=${"es"}`
             return this.call(path).then(res => res.results)
         }
 

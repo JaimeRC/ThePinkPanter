@@ -1,7 +1,6 @@
 import React from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi.js';
-import no_image from './images/no_image.png'
 
 class ItemCast extends React.Component {
     constructor() {
@@ -18,7 +17,7 @@ class ItemCast extends React.Component {
 
     render() {
         return (
-            <div id="reviews" className="container">
+            <div id="reviews">
                 <div className="row">
                     <div className="col">
                         <ul>
