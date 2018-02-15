@@ -1,5 +1,5 @@
-import React, { Componet } from 'react'
-import './main.css'
+import React from 'react'
+import './styles/main.css'
 
 function Jumbotron(props) {
     return (

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './main.css';
-import withRouter from 'react-router-dom/withRouter';
+import React from 'react';
+import './styles/main.css';
+import no_image from './images/no_image.jpg'
 
 class Card extends Component {
     constructor() {

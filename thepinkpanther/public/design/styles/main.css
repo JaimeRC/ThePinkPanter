@@ -193,7 +193,19 @@ main .open {
     transform-style: preserve-3d;
 }
 
-  
+/*Css Main > Description*/
+  #reviews{
+    color: white;
+    height: 500px;
+    background-color: #FF0198 !important;
+    
+}
+
+#trailer{
+    height: 500px;
+    background-color: rgb(108, 117, 125);
+}
+
 
 /*Css Footer */
 .footer{

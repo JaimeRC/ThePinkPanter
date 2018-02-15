@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { HashRouter, Route, NavLink, withRouter } from 'react-router-dom'
+import React, {Component} from 'react'
+import { Route } from 'react-router-dom'
 import pinkPanterApi from '../../pinkPanterApi.js';
 import Home from '../Home';
-import Films from '../Films';
+import Items from '../Items';
 import Results from '../Results'
 import DetailsItem from '../DetailsItem'
 
@@ -26,10 +26,7 @@ class Main extends Component {
             .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
     }
 
-
-
     render() {
-
         return (
             <div className="header">
 
@@ -42,13 +39,13 @@ class Main extends Component {
                     />)} />
 
                 <Route exact path='/Films' render={() => (
-                    <Films
-                        films={this.state.films}
+                    <Items
+                        items={this.state.films}
                     />)} />
 
                 <Route exact path='/TV' render={() => (
-                    <Films
-                        films={this.state.series}
+                    <Items
+                        items={this.state.series}
                     />)} />
 
                 <Route path="/search/:query" component={Results} />

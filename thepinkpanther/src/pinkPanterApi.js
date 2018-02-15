@@ -13,28 +13,27 @@ let pinkPanterApi;
         },
 
         getTypePopular: function (type, page) {
-            let path = baseUrl + type + '/popular' + token + '&language=es' + '&page=' + page
+            let path = `${baseUrl}${type}/popular${token}&language=es&page=${page}`
             return this.call(path).then(res => res.results)
         },
 
         getDetaillsIdType: function (type, id) {
-            let path = baseUrl + type + '/' + id + token
+            let path = `${baseUrl}${type}/${id}${token}`
             return this.call(path).then(res => res)
         },
 
         getSearch: function (query) {
-            let path = baseUrl + 'search/multi' + token + '&language=es' + '&query=' + query
+            let path = `${baseUrl}search/multi${token}&language=es&query=${query}`
             return this.call(path).then(res => res.results)
         },
 
         getCast: function (type, id) {
-            let path = baseUrl + type + '/' + id + '/credits' + token
-            console.log(path)
+            let path = `${baseUrl}${type}/${id}/credits${token}`
             return this.call(path).then(res => res.cast)
         },
 
         getVideos: function (type, id) {
-            let path = baseUrl + type + '/' + id + '/videos' + token
+            let path = `${baseUrl}${type}/${id}/videos${token}`
             return this.call(path).then(res => res.results[0].key)
         }
 

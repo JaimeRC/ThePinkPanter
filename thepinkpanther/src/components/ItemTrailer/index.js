@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './styles/main.css'
 import pinkPanterApi from '../../pinkPanterApi.js';
-
 
 class ItemTrailer extends React.Component {
     constructor() {
@@ -16,7 +15,6 @@ class ItemTrailer extends React.Component {
             .then(video => this.setState({ video }))
     }
 
-
     render() {
         return (
             <div id="trailer" className="d-flex justify-content-center">
@@ -25,6 +23,5 @@ class ItemTrailer extends React.Component {
         )
     }
 }
-
 
 export default ItemTrailer
