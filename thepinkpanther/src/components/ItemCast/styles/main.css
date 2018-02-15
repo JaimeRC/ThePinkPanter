@@ -1,6 +1,6 @@
 #reviews{
     color: white;
-    height: 500px;
+    height: 380px;
     width: auto;
     background-color: #FF0198 !important;
     overflow: hidden;
@@ -8,13 +8,40 @@
     margin-top: 20px;
 }
 
-.cast{
-    width: 5%;
-    height: 10%;
-    border-radius: 50%;
+h5{
+    text-align: center;
+    margin-top: 10px;
 }
 
 li{
     display: inline;
     margin: 20px;
+}
+
+.cast { 
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
+  display: flex;
+}
+.cast div { 
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 200px; 
+  margin: .5vw; 
+}
+.cast div img { 
+  width: 100%; 
+  height: auto; 
+}
+@media screen and (max-width: 400px) {
+  .cast div { margin: 0; }
+  .cast { padding: 0; }
+  
 }
