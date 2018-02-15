@@ -18,7 +18,9 @@ class ItemTrailer extends React.Component {
     render() {
         return (
             <div id="trailer" className="d-flex justify-content-center">
+
                 <iframe id="ytplayer" type="text/html" width={640} height={360} src={(this.state.video.length > 0) ? `http://www.youtube.com/embed/${this.state.video[0].key}` : undefined} frameBorder={0} />
+
             </div>
         )
     }
