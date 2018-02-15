@@ -18,11 +18,38 @@ class Main extends Component {
         }
     }
 
-    componentWillMount() {
-        pinkPanterApi.getTypePopular('movie', 1)
+    loadMovies(type, page) {
+        pinkPanterApi.getTypePopular(type, page)
             .then(films => this.setState({ itemActiveFilms: films.shift(), films }))
-        pinkPanterApi.getTypePopular('tv', 1)
+    }
+
+    loadTv(type, page) {
+        pinkPanterApi.getTypePopular(type, page)
             .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
+    }
+
+    componentWillMount() {
+        this.setState({ activePageMovie: 1 })
+        this.setState({ activePageTv: 1 })
+        this.loadMovies('movie', 1)
+        this.loadTv('tv', 1)
+    }
+
+    componentWillReceiveProps(props) {
+        this.setState({ activePageMovie: 1 })
+        this.setState({ activePageTv: 1 })
+        this.loadMovies('movie', 1)
+        this.loadTv('tv', 1)
+    }
+
+    handlePageChangeMovies = (pageNumber) => {
+        this.setState({ activePageMovie: pageNumber })
+        this.loadMovies('movie', pageNumber)
+    }
+
+    handlePageChangeTv = (pageNumber) => {
+        this.setState({ activePageTv: pageNumber })
+        this.loadTv('tv', pageNumber)
     }
 
     render() {

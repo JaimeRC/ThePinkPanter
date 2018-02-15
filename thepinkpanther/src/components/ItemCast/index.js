@@ -17,14 +17,20 @@ class ItemCast extends React.Component {
 
     render() {
         return (
-            <div id="reviews" className="container">
-                <ul>
-                    {this.state.cast.map(actor => {
-                        return (
-                            <li key={actor.id}><img className="cast" src={`http://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt={actor.name} />{actor.name}</li>
-                        )
-                    })}
-                </ul>
+            <div id="reviews">
+                <div className="row">
+                    <div className="col">
+                        <ul>
+                            {this.state.cast.map(actor => {
+                                return (
+                                    <li key={actor.id}><img className="cast" src={(actor.profile_path) ? `http://image.tmdb.org/t/p/w500/${actor.profile_path}` : no_image} alt={actor.name} />{actor.name}</li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                    <div className="col">
+                    </div>
+                </div>
             </div>
         )
     }

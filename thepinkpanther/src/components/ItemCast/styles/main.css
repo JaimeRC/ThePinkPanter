@@ -1,9 +1,11 @@
 #reviews{
     color: white;
     height: 500px;
+    width: auto;
     background-color: #FF0198 !important;
     overflow: hidden;
     padding: 20px;
+    margin-top: 20px;
 }
 
 .cast{

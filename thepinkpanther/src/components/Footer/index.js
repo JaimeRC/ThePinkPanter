@@ -6,7 +6,7 @@ import logoSky from './images/logo_skylab.png'
 function Footer(props) {
     return (
         <footer className="footer">
-            <div class="container">
+            <div className="container">
                         <ul>
                         <label>Contributors:</label>
                             <li>Carlos Ramos</li>
