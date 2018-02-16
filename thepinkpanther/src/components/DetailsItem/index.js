@@ -14,6 +14,10 @@ class DetailsItem extends Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     componentWillMount() {
         pinkPanterApi.getDetaillsIdType(this.props.match.params.type, this.props.match.params.id)
             .then(item => this.setState({ item }))

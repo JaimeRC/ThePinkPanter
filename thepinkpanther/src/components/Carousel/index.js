@@ -5,9 +5,7 @@ import withRouter from 'react-router-dom/withRouter';
 class Carousel extends React.Component {
     constructor() {
         super()
-        this.state = {
-            id: ""
-        }
+    
     }
 
     componentDidMount() {

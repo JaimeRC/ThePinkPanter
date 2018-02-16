@@ -15,10 +15,10 @@ function Header(props) {
                         <div className="collapse navbar-collapse" id="navbarCollapse">
                             <ul className="navbar-nav mr-auto">
                                 <li className="nav-item">
-                                <NavLink className="nav-link" to="/Films" activeClassName="active">Peliculas</NavLink>
+                                <NavLink className="nav-link" to="/films" activeClassName="active">Peliculas</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                <NavLink className="nav-link" to="/TV" activeClassName="active">Series</NavLink>
+                                <NavLink className="nav-link" to="/tv" activeClassName="active">Series</NavLink>
                                 </li>
                             </ul>
                             <SearchWithRouter />

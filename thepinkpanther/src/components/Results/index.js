@@ -12,6 +12,10 @@ class Results extends React.Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     loadSearch(query, page) {
         pinkPanterApi.getSearch(query, page)
             .then(search => this.setState({ search }))
@@ -19,17 +23,17 @@ class Results extends React.Component {
 
     componentWillMount() {
         this.setState({ activePage: 1 })
-        this.loadSearch(this.props.match.params.query, this.state.activePage)
+        this.loadSearch(this.props.match.params.query, 1)
     }
 
     componentWillReceiveProps(props) {
         this.setState({ activePage: 1 })
-        this.loadSearch(props.match.params.query, this.state.activePage)
+        this.loadSearch(props.match.params.query, 1)
     }
 
     handlePageChange = (pageNumber) => {
         this.setState({ activePage: pageNumber })
-        this.loadSearch(this.props.match.params.query, this.state.activePage)
+        this.loadSearch(this.props.match.params.query, pageNumber)
     }
 
     render() {
