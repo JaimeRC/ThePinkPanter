@@ -26,12 +26,12 @@ class Main extends Component {
     }
 
     loadMovies(type, page) {
-        pinkPanterApi.getTypePopular(type, page)
+        pinkPanterApi.getTypePopular(type, page, this.props.lang)
             .then(films => this.setState({ itemActiveFilms: films.shift(), films }))
     }
 
     loadTv(type, page) {
-        pinkPanterApi.getTypePopular(type, page)
+        pinkPanterApi.getTypePopular(type, page, this.props.lang)
             .then(series => this.setState({ itemActiveSeries: series.shift(), series }))
     }
 
@@ -69,6 +69,7 @@ class Main extends Component {
                         itemActiveFilms={this.state.itemActiveFilms}
                         series={this.state.series}
                         itemActiveSeries={this.state.itemActiveSeries}
+                        lang={this.props.lang}
                     />)} />
 
                 <Route exact path='/Films' render={() => (
@@ -98,10 +99,16 @@ class Main extends Component {
                             onChange={this.handlePageChangeTv}
                         /></div>)} />
 
-                <Route path="/search/:query" component={Results} />
+                <Route path="/search/:query" render={routeProps => (
+                    <Results {...routeProps}
+                    lang={this.props.lang}
+                />)} />
 
-                <Route path="/details/:type/:id" component={DetailsItem} />
-
+                <Route path="/details/:type/:id" render={routeProps => (
+                    <DetailsItem {...routeProps} 
+                        lang={this.props.lang}
+                    />)} />
+                
             </div>)
     }
 }

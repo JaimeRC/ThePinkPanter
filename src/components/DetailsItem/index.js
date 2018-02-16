@@ -19,20 +19,25 @@ class DetailsItem extends Component {
     }
 
     componentWillMount() {
-        pinkPanterApi.getDetaillsIdType(this.props.match.params.type, this.props.match.params.id)
+        pinkPanterApi.getDetaillsIdType(this.props.match.params.type, this.props.match.params.id, this.props.lang)
+            .then(item => this.setState({ item }))
+    }
+
+    componentWillReceiveProps(props){
+        pinkPanterApi.getDetaillsIdType(this.props.match.params.type, this.props.match.params.id, this.props.lang)
             .then(item => this.setState({ item }))
     }
 
     render() {
         return (
             <div>
-                <Jumbotron title={(this.state.item.title) ? this.state.item.title : this.state.item.name} />
+                <Jumbotron title={(this.state.item.title) ? this.state.item.title : this.state.item.name} lang={this.props.lang}/>
 
-                <ItemResume item={this.state.item} />
+                <ItemResume item={this.state.item} lang={this.props.lang}/>
 
-                <ItemCast idItem={this.props.match.params.id} type={this.props.match.params.type} />
+                <ItemCast idItem={this.props.match.params.id} type={this.props.match.params.type} lang={this.props.lang}/>
 
-                <ItemTrailer idItem={this.props.match.params.id} type={this.props.match.params.type} />
+                <ItemTrailer idItem={this.props.match.params.id} type={this.props.match.params.type} lang={this.props.lang}/>
             </div>
         )
     }

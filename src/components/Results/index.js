@@ -17,7 +17,7 @@ class Results extends React.Component {
     }
 
     loadSearch(query, page) {
-        pinkPanterApi.getSearch(query, page)
+        pinkPanterApi.getSearch(query, page, this.props.lang)
             .then(search => this.setState({ search }))
     }
 

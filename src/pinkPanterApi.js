@@ -12,18 +12,18 @@ let pinkPanterApi;
             return fetch(url).then(res => res.json())
         },
 
-        getTypePopular: function (type, page) {
-            let path = `${baseUrl}${type}/popular${token}&language=${"es"}&page=${page}`
+        getTypePopular: function (type, page, lang) {
+            let path = `${baseUrl}${type}/popular${token}&language=${lang || 'es'}&page=${page}`
             return this.call(path).then(res => res.results)
         },
 
-        getDetaillsIdType: function (type, id) {
-            let path = `${baseUrl}${type}/${id}${token}&language=${"es"}`
+        getDetaillsIdType: function (type, id, lang) {
+            let path = `${baseUrl}${type}/${id}${token}&language=${lang || 'es'}`
             return this.call(path).then(res => res)
         },
 
-        getSearch: function (query,page) {
-            let path = `${baseUrl}search/multi${token}&language=${"es"}&page=${page}&query=${query}`
+        getSearch: function (query,page, lang) {
+            let path = `${baseUrl}search/multi${token}&language=${lang || 'es'}&page=${page}&query=${query}`
             return this.call(path).then(res => res.results)
         },
 
@@ -32,8 +32,8 @@ let pinkPanterApi;
             return this.call(path).then(res => res.cast)
         },
 
-        getVideos: function (type, id) {
-            let path = `${baseUrl}${type}/${id}/videos${token}&language=${"es"}`
+        getVideos: function (type, id, lang) {
+            let path = `${baseUrl}${type}/${id}/videos${token}&language=${lang || 'es'}`
             return this.call(path).then(res => res.results)
         }
 

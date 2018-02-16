@@ -12,7 +12,12 @@ class ItemTrailer extends React.Component {
     }
 
     componentWillMount() {
-        pinkPanterApi.getVideos(this.props.type, this.props.idItem)
+        pinkPanterApi.getVideos(this.props.type, this.props.idItem, this.props.lang)
+            .then(video => this.setState({ video }))
+    }
+
+    componentWillReceiveProps(props){
+        pinkPanterApi.getVideos(this.props.type, this.props.idItem, this.props.lang)
             .then(video => this.setState({ video }))
     }
 

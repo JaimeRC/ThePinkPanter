@@ -9,7 +9,7 @@ function Home(props) {
         <main>
             <section>
                 <header>
-                    <Jumbotron title={"Peliculas"} />
+                    <Jumbotron title={props.lang === 'es' ? 'Peliculas' : 'Movies'} />
                 </header>
                 <Carousel
                     items={props.films}
@@ -20,8 +20,7 @@ function Home(props) {
 
             <section className="logo hidden-xs-down" >
                 <img src={logo} className="img-fluid" alt="logo" width='30%' />
-                <p className="mgt10">Más de 10.000 titulos disponibles para nuestros clientes</p>
-                
+                <p className="mgt10">{props.lang === 'es' ? 'Más de 10.000 titulos disponibles para nuestros clientes' : 'More than 10.000 titles availables for our clients'}</p>
             </section>
 
             <section>

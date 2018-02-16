@@ -17,19 +17,19 @@ function ItemResume(props) {
                     <table className="table table-sm table-dark">
                         <tbody>
                             <tr>
-                                <th scope="row">Pagina oficial</th>
+                                <th scope="row">{props.lang === 'es' ? 'Pagina Oficial' : 'Home page'}</th>
                                 <td>{props.item.homepage}</td>
                             </tr>
                             <tr>
-                                <th scope="row">Fecha de Lanzamiento</th>
+                                <th scope="row">{props.lang === 'es' ? 'Fecha de estreno' : 'Release date'}</th>
                                 <td>{(props.item.release_date) ? props.item.release_date : '- - -'}</td>
                             </tr>
                             <tr>
-                                <th scope="row">Genero</th>
+                                <th scope="row">{props.lang === 'es' ? 'Genero' : 'Genre'}</th>
                                 <td>{(props.item.genres) ? props.item.genres.slice(0,1).map(genre => genre.name) : '- - -'}</td>
                             </tr>
                             <tr>
-                                <th scope="row">Productora</th>
+                                <th scope="row">{props.lang === 'es' ? 'Productora' : 'Company'}</th>
                                 <td>{(props.item.production_companies) ? props.item.production_companies.slice(0,1).map(product => product.name) : '- - -'}</td>
                             </tr>
                         </tbody>
