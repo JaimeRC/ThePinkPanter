@@ -10,6 +10,10 @@ class Carousel extends React.Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     idItem = (type, id) => {
         this.props.history.push(`/details/${type}/${id}`)
     }

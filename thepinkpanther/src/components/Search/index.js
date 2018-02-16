@@ -10,6 +10,10 @@ class Search extends Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     keepInput = (e) => this.setState({ query: e.target.value })
 
     search() {

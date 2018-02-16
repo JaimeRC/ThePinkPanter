@@ -5,7 +5,6 @@ import Jumbotron from '../Jumbotron'
 import ItemResume from '../ItemResume'
 import ItemCast from '../ItemCast'
 import ItemTrailer from '../ItemTrailer'
-import Card from '../Card'
 
 class DetailsItem extends Component {
     constructor() {

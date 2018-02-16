@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100, 400');
+@import url('https://fonts.googleapis.com/css?family=Anton|Oswald:300|Righteous');
 
 
 
@@ -34,9 +34,9 @@
 }
 
 h3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 
@@ -87,7 +87,9 @@ h3 {
 .back p {
     margin-top: -10px;
     padding: 20px;
-    font-family: 'Roboto', sans-serif;
+     font-family: 'Oswald', sans-serif;
+     font-size: 1em;
+     line-height: 23px;
     text-align: center;
     color: white;
 }

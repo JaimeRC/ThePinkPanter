@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300|Anton');
+
+
+
 #reviews{
     color: white;
     width: auto;
@@ -8,7 +12,9 @@
 }
 
 h2 {
-    margin-left: 20px;
+  color: #333;
+  font-family: 'Anton', sans-serif;
+    margin-left: 100px;
 }
 
 h5{

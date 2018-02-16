@@ -11,6 +11,10 @@ class ItemCast extends React.Component {
         }
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     componentWillMount() {
         pinkPanterApi.getCast(this.props.type, this.props.idItem)
             .then(cast => this.setState({ cast }))
@@ -26,7 +30,7 @@ class ItemCast extends React.Component {
                         
                             {this.state.cast.slice(0, 12).map(actor => {
                                 return (
-                                    <div>
+                                    <div key={actor.id}>
                                         <img src={(actor.profile_path) ? `http://image.tmdb.org/t/p/w500/${actor.profile_path}` : no_image} alt={actor.name} />
                                         <h5>{actor.name}</h5>
                                     </div>

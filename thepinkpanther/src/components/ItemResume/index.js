@@ -17,7 +17,7 @@ function ItemResume(props) {
                         <tbody>
                             <tr>
                                 <th scope="row">Pagina oficial</th>
-                                <td>{(props.item.homepage) ? props.item.homepage : '- - - '}</td>
+                                <td>{props.item.homepage}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Fecha de Lanzamiento</th>
