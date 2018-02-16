@@ -20,7 +20,7 @@ class Carousel extends React.Component {
                 <div id={this.props.title} className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
                         <div key={this.props.itemActive.id} className="carousel-item active">
-                            <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${this.props.itemActive.backdrop_path}`} alt={(this.props.itemActive.title) ? this.props.itemActive.title : this.props.itemActive.name} />
+                            <img className="d-block w-100" src={(this.props.itemActive.backdrop_path) ? `http://image.tmdb.org/t/p/w1280/${this.props.itemActive.backdrop_path}` : undefined} alt={(this.props.itemActive.title) ? this.props.itemActive.title : this.props.itemActive.name} />
                             <div className="carousel-caption d-none d-md-block">
                                 <button type="button" className="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); this.idItem(this.props.title, this.props.itemActive.id) }}>
                                     <h6>{(this.props.itemActive.title) ? this.props.itemActive.title : this.props.itemActive.name}</h6>
@@ -31,7 +31,7 @@ class Carousel extends React.Component {
                         {this.props.items.map(item => {
                             return (
                                 <div key={item.id} className="carousel-item">
-                                    <img className="d-block w-100" src={`http://image.tmdb.org/t/p/w1280/${item.backdrop_path}`} alt={(item.title) ? item.title : item.name} />
+                                    <img className="d-block w-100" src={(this.props.itemActive.backdrop_path) ? `http://image.tmdb.org/t/p/w1280/${item.backdrop_path}` : undefined} alt={(item.title) ? item.title : item.name} />
                                     <div className="carousel-caption d-none d-md-block">
                                         <button type="button" className="btn btn-secondary btn-lg btn-block" onClick={(e) => { e.preventDefault(); this.idItem(this.props.title, item.id) }}>
                                             <h5>{item.title ? item.title : item.name}</h5>

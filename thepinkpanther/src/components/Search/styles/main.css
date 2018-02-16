@@ -1,13 +1,7 @@
-
-
-
 .App-header {
     top: 0;
-    height: 40px;
-    
+    height: 30px;
 }
-
-
 
 .btn-outline-success{
   color:#FF0198 !important;
@@ -19,7 +13,6 @@
   color: gray !important;
   border-color: gray !important;
 }
-
 
 @media screen and (max-width: 780px){
    
@@ -42,9 +35,6 @@
     .App-header {
     height: 10px;
     
-} 
-#header {
-    height: 10px;
 } 
 }
 
