@@ -8,7 +8,7 @@ function Footer(props) {
         <footer className="footer">
             <div className="container">
                         <ul>
-                        <label>Contributors:</label>
+                        <label>Contribuidores:</label>
                             <li><a className="colaborators" href="https://github.com/Asix94">Carlos Ramos</a></li>
                             <li><a className="colaborators" href="https://github.com/AlexGonRod">Alex Gonzalez</a></li>
                             <li><a className="colaborators" href="https://github.com/JaimeRC">Jaime Rubio</a></li>

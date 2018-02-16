@@ -24,7 +24,7 @@ class ItemCast extends React.Component {
                     <h2>CAST</h2>
                         <header className='cast'>
                         
-                            {this.state.cast.map(actor => {
+                            {this.state.cast.slice(0, 12).map(actor => {
                                 return (
                                     <div>
                                         <img src={(actor.profile_path) ? `http://image.tmdb.org/t/p/w500/${actor.profile_path}` : no_image} alt={actor.name} />
