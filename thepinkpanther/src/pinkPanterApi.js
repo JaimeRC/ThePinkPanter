@@ -40,4 +40,4 @@ let pinkPanterApi;
     }
 })()
 
-export default pinkPanterApi
+//export default pinkPanterApi
