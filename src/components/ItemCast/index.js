@@ -25,12 +25,21 @@ class ItemCast extends React.Component {
             <div id="reviews">
                 <div className="row">
                     <div className="col-md-12">
+<<<<<<< HEAD:src/components/ItemCast/index.js
                     <h2>{this.props.lang === 'es' ? 'Actores' : 'Characters'}</h2>
                         <header className='cast'>
                         
                             {this.state.cast.slice(0, 12).map(actor => {
                                 return (
                                     <div key={actor.id}>
+=======
+                        <h2>CAST</h2>
+                        <header className='cast'>
+
+                            {this.state.cast.map(actor => {
+                                return (
+                                    <div key={actor.name}>
+>>>>>>> 942a5a9a116e5bebc77710baeffdb548837b3597:thepinkpanther/src/components/ItemCast/index.js
                                         <img src={(actor.profile_path) ? `http://image.tmdb.org/t/p/w500/${actor.profile_path}` : no_image} alt={actor.name} />
                                         <h5>{actor.name}</h5>
                                     </div>

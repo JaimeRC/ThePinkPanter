@@ -2,11 +2,9 @@
     padding-top: 25px;
 }
 
-
-
 .imagetv{
     width: 735px;
-    height: 440px;
+    height: 445px;
     position: absolute;
     z-index: 0;
 }
