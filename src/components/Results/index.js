@@ -23,11 +23,7 @@ class Results extends React.Component {
 
     componentWillMount() {
         this.setState({ activePage: 1 })
-<<<<<<< HEAD:src/components/Results/index.js
-        this.loadSearch(this.props.match.params.query, 1)
-=======
         this.loadSearch(this.props.match.params.query, this.state.activePage)
->>>>>>> 942a5a9a116e5bebc77710baeffdb548837b3597:thepinkpanther/src/components/Results/index.js
     }
 
     componentWillReceiveProps(props) {
@@ -48,11 +44,7 @@ class Results extends React.Component {
                     <div className='card-deck'>
                         {this.state.search.map(item => {
                             return (
-<<<<<<< HEAD:src/components/Results/index.js
-                                <Card item={item} type={item.media_type} key={item.id}/>
-=======
                                 <Card item={item} type={item.media_type} key={item.name}/>
->>>>>>> 942a5a9a116e5bebc77710baeffdb548837b3597:thepinkpanther/src/components/Results/index.js
                             )
                         })}
                     </div>

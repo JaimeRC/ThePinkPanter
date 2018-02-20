@@ -15,11 +15,7 @@ class Card extends React.Component {
         window.scrollTo(0, 0)
     }
 
-<<<<<<< HEAD:src/components/Card/index.js
-    idItem = (type,id) => {
-=======
     idItem = (type, id) => {
->>>>>>> 942a5a9a116e5bebc77710baeffdb548837b3597:thepinkpanther/src/components/Card/index.js
         this.props.history.push(`/details/${type}/${id}`)
     }
 

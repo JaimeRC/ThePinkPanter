@@ -14,14 +14,9 @@ class DetailsItem extends Component {
         }
     }
 
-<<<<<<< HEAD:src/components/DetailsItem/index.js
     componentDidMount() {
         window.scrollTo(0, 0)
     }
-=======
-    
-
->>>>>>> 942a5a9a116e5bebc77710baeffdb548837b3597:thepinkpanther/src/components/DetailsItem/index.js
 
     componentWillMount() {
         pinkPanterApi.getDetaillsIdType(this.props.match.params.type, this.props.match.params.id, this.props.lang)
